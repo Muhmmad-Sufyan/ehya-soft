@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "AlifLaila",
+    title: "AlifLaila Kids Digital Library",
     categoryId: ["mobile-apps","web-apps","dashboards"],
     tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS", "Laravel"],
     description:
@@ -37,7 +37,7 @@ const projects = [
     description:
       "A peer-reviewed academic journal platform by Ehya Education Services, facilitating scholarly discourse and research publication.",
     image: "/project-images/ijcd.jpg",
-    link: "https://ijcd.ehya.com.pk/",
+    link: "https://journal.ehya.com.pk/ijcd",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function ProjectGrid({ activeFilter }) {
   if (filtered.length === 0) {
     return (
       <div className="text-center py-20 mb-20">
-        <p className="text-slate-500 dark:text-slate-400 text-lg">
+        <p className="text-slate-500 text-lg">
           No projects found for this category yet.
         </p>
       </div>
@@ -65,7 +65,7 @@ export default function ProjectGrid({ activeFilter }) {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg hover:shadow-2xl transition-shadow"
+          className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow"
         >
           <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
             <img
@@ -90,10 +90,10 @@ export default function ProjectGrid({ activeFilter }) {
                 </span>
               ))}
             </div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+            <h3 className="text-xl font-bold text-slate-900 mb-2">
               {project.title}
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               {project.description}
             </p>
           </div>
