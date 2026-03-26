@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-          <p>&copy; 2024 EhyaSoft Software Development Agency. All rights reserved.</p>
+          <p>&copy; 2019 EhyaSoft by Ehya Education Services. All rights reserved.</p>
           <p>Made with passion for the digital frontier.</p>
         </div>
       </div>
