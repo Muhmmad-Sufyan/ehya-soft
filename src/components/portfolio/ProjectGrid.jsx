@@ -14,8 +14,8 @@ const projects = [
   },
   {
     title: "Ehya Classmate",
-    categoryId: ["web-apps","mobile-apps","dashboards"],
-    tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS"],
+    categoryId: ["web-apps","mobile-apps","dashboards","ai-ml",'agentic-ai'],
+    tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS",],
     description:
       "An innovative education platform connecting students and teachers with smart tools for learning, collaboration, and classroom management.",
     image: "/project-images/classmate.png",
