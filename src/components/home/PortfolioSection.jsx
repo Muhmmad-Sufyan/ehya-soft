@@ -39,7 +39,7 @@ export default function PortfolioSection() {
               <div className="relative rounded-2xl overflow-hidden bg-slate-100 aspect-video mb-6 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
                 <img alt="Project Portfolio" className="w-full h-full content-cover" src={project.image} />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="px-6 py-2 bg-white text-primary font-bold rounded-full">View Case Study</span>
+                  <span className="px-6 py-2 bg-white text-primary font-bold rounded-full">Visit</span>
                 </div>
               </div>
               <div className="flex gap-2 mb-3">
