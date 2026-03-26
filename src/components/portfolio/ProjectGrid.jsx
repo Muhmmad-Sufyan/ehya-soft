@@ -22,7 +22,7 @@ const projects = [
     link: "https://classmate.ehya.com.pk/",
   },
   {
-    title: "FieldX AI",
+    title: "FIELDx AI",
     categoryId: ["ai-ml","web-apps" ,"mobile-apps","dashboards","agentic-ai","rag-graphrag"],
     tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS"],
     description:
