@@ -111,7 +111,7 @@ export default function ContactHero() {
               Our Global Presence
             </h3>
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors">
                   <span className="material-symbols-outlined text-primary">
                     location_on
@@ -125,7 +125,7 @@ export default function ContactHero() {
                     101 Montgomery St
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors">
                   <span className="material-symbols-outlined text-primary">
@@ -134,10 +134,10 @@ export default function ContactHero() {
                 </div>
                 <div>
                   <p className="font-bold text-slate-900 dark:text-white">
-                    London
+                    Lahore
                   </p>
                   <p className="text-slate-500 dark:text-slate-400">
-                    30 St Mary Axe
+                    101 N Block, Plot 101 N, Model Town Extension Block N Model Town, Lahore, 54700
                   </p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function ContactHero() {
                     Email
                   </p>
                   <p className="text-slate-500 dark:text-slate-400">
-                    hello@ehyanova.com
+                    hello@ehya.com.pk
                   </p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function ContactHero() {
                     Phone
                   </p>
                   <p className="text-slate-500 dark:text-slate-400">
-                    +1 (555) 000-0000
+                    (042) 35164921
                   </p>
                 </div>
               </div>

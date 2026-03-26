@@ -3,14 +3,16 @@ import Link from "next/link";
 export default function PortfolioSection() {
   const projects = [
     {
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDfLLLxk8xLqX2ixOM1CUBzJkO7dM5GQmRsRmbw5syFdyi-cStKMPqdxNlsf2ZCNb-3zB756jzW5hPYdeNT0LbsqwiZ4VBJdKxiXbJnzq6lzx6BfAftsIDxYZDjRov_wozfPD6OwH8l3K83lL8dSwoqNagiZxphqjTn00yekBJV7l-Uny_v2S8peANbWKEj3C9ka9xmyEUtG_txXjxsl0hmGdYS2CDwDkGTZqrbZQ2VvGefchqk4ilijaJXkite6uk-rD2FDgyp71I",
-      tags: ["React Native", "Firebase"],
-      title: "NeoBank \u2013 Revolutionizing Personal Finance",
+      image: "/project-images/aliflaila.png",
+      tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS","Laravel"],
+      title: "Aliflaila",
+      link: "https://aliflaila.app/",
     },
     {
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDruEW34PUPij1Z2L9sAGLcNtupBCiWN4DLbazYoJXqZD7_mkWztjAaS0Zilz98vi0nEG0YgJv7hXMvxlZCiCIs7bRaH2vxNg9uwc4vEoRQFd9V5dcepNE1rd7s4Hj563uPd_0GwaEopy-aSEu1kccz5H1jMCgSN-7Xwao3j7e-TR-AqLydemhmmUpMeXaKA_dApIo6qaGT298LeHpbaldWLbex8x_x29vajjdwGOF4cpB-HqaX5Aa_wtIsI5hzaSHEA87ZajQMSIM",
-      tags: ["Next.js", "Shopify Plus"],
-      title: "LuxeCommerce \u2013 High-End Retail Experience",
+      image: "/project-images/fieldx.jpeg",
+      tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS"],
+      title: "FieldX AI",
+      link: "https://fieldxai.com/",
     },
   ];
 
@@ -33,7 +35,7 @@ export default function PortfolioSection() {
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="group cursor-pointer">
+            <Link key={index} className="group cursor-pointer" href={project.link} target="_blank" rel="noopener noreferrer">
               <div className="relative rounded-2xl overflow-hidden bg-slate-100 aspect-video mb-6 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
                 <img alt="Project Portfolio" className="w-full h-full object-cover" src={project.image} />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -50,7 +52,7 @@ export default function PortfolioSection() {
               <h3 className="text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
