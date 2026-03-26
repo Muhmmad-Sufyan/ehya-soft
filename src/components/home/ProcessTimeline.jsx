@@ -27,7 +27,7 @@ export default function ProcessTimeline() {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden" id="process">
+    <section className="py-24 bg-slate-50 relative overflow-hidden" id="process">
       <div className="hero-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">

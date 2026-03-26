@@ -16,9 +16,9 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <OurStory />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <CoreValues />
-      <LeadershipTeam />
+      {/* <LeadershipTeam /> */}
       <AboutCTA />
     </>
   );

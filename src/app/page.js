@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <TrustLogos />
-      <ServicesGrid />
-      <ProcessTimeline />
+      {/* <TrustLogos /> */}
+      {/* <ServicesGrid /> */}
       <PortfolioSection />
+      <ProcessTimeline />
       <WhyChooseUs />
       <IndustriesSection />
       <CTASection />
