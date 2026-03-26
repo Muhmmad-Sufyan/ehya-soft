@@ -20,7 +20,7 @@ export default function FilterChips({ activeFilter, onFilterChange }) {
           className={
             activeFilter === filter.id
               ? "px-6 py-2 rounded-full bg-primary text-white text-sm font-bold"
-              : "px-6 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-semibold hover:bg-primary/10 hover:text-primary transition-all"
+              : "px-6 py-2 rounded-full bg-slate-200 text-slate-600 text-sm font-semibold hover:bg-primary/10 hover:text-primary transition-all"
           }
         >
           {filter.label}

@@ -1,7 +1,7 @@
 export default function MapSection() {
   return (
     <section className="w-full h-[450px] relative bg-slate-200 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background-light dark:from-background-dark to-transparent z-10 h-32" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background-light to-transparent z-10 h-32" />
       <img
         alt="Minimalist grayscale world map"
         className="w-full h-full object-cover filter grayscale contrast-125 opacity-50"
@@ -16,7 +16,7 @@ export default function MapSection() {
           </div>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent z-10 h-32" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background-light to-transparent z-10 h-32" />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 export default function PortfolioCTA() {
   return (
-    <section className="bg-slate-900 dark:bg-slate-950 rounded-3xl p-12 md:p-20 text-center mb-12">
+    <section className="bg-slate-900 rounded-3xl p-12 md:p-20 text-center mb-12">
       <h3 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
         Ready to build the future together?
       </h3>

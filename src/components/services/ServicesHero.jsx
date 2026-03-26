@@ -14,7 +14,7 @@ export default function ServicesHero() {
             Architecting the{" "}
             <span className="gradient-text">Next Generation</span> of Tech.
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
             We combine high-end Silicon Valley aesthetics with robust
             engineering to deliver digital experiences that scale. From vision to
             deployment, we are your product partners.

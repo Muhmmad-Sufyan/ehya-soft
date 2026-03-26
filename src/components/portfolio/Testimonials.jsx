@@ -42,22 +42,22 @@ function StarRating() {
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 dark:bg-slate-900/50 py-20 px-6 mb-20">
+    <section className="bg-slate-50 py-20 px-6 mb-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <div>
             <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">
               Testimonials
             </span>
-            <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">
+            <h3 className="text-3xl md:text-4xl font-black text-slate-900">
               What our clients say
             </h3>
           </div>
           <div className="flex gap-3">
-            <button className="w-12 h-12 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+            <button className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
               <span className="material-symbols-outlined">chevron_left</span>
             </button>
-            <button className="w-12 h-12 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+            <button className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
               <span className="material-symbols-outlined">chevron_right</span>
             </button>
           </div>
@@ -66,10 +66,10 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg"
+              className="bg-white rounded-2xl p-8 shadow-lg"
             >
               <StarRating />
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed mb-6">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div className="flex items-center gap-4">
@@ -79,10 +79,10 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-bold text-slate-900 dark:text-white">
+                  <p className="font-bold text-slate-900">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">
+                  <p className="text-sm text-slate-500">
                     {testimonial.role}
                   </p>
                 </div>
