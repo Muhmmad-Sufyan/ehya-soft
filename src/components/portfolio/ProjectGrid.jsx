@@ -1,33 +1,65 @@
+"use client";
+
 import Link from "next/link";
 
 const projects = [
   {
-    title: "Aliflaila",
+    title: "AlifLaila",
+    categoryId: ["mobile-apps","web-apps","dashboards"],
     tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS", "Laravel"],
-    description: "A feature-rich storytelling and reading platform built with React Native and a robust backend, delivering an immersive experience for users worldwide.",
+    description:
+      "A feature-rich storytelling and reading platform built with React Native and a robust backend, delivering an immersive experience for users worldwide.",
     image: "/project-images/aliflaila.png",
     link: "https://aliflaila.app/",
   },
   {
     title: "Ehya Classmate",
+    categoryId: ["web-apps","mobile-apps","dashboards"],
     tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS"],
-    description: "An innovative education platform connecting students and teachers with smart tools for learning, collaboration, and classroom management.",
+    description:
+      "An innovative education platform connecting students and teachers with smart tools for learning, collaboration, and classroom management.",
     image: "/project-images/classmate.png",
     link: "https://classmate.ehya.com.pk/",
   },
   {
     title: "FieldX AI",
+    categoryId: ["ai-ml","web-apps" ,"mobile-apps","dashboards","agentic-ai","rag-graphrag"],
     tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS"],
-    description: "An AI-powered field operations platform that streamlines data collection, analysis, and team coordination for enterprises.",
+    description:
+      "An AI-powered field operations platform that streamlines data collection, analysis, and team coordination for enterprises.",
     image: "/project-images/fieldx.jpeg",
     link: "https://fieldxai.com/",
   },
+  {
+    title: "Ittesaal - Journal of Connecting Discourses",
+    categoryId: ["web-apps"],
+    tags: ["Next.js", "Node.js", "MongoDB", "AWS"],
+    description:
+      "A peer-reviewed academic journal platform by Ehya Education Services, facilitating scholarly discourse and research publication.",
+    image: "/project-images/ijcd.jpg",
+    link: "https://ijcd.ehya.com.pk/",
+  },
 ];
 
-export default function ProjectGrid() {
+export default function ProjectGrid({ activeFilter }) {
+  const filtered =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((p) => p.categoryId.includes(activeFilter));
+
+  if (filtered.length === 0) {
+    return (
+      <div className="text-center py-20 mb-20">
+        <p className="text-slate-500 dark:text-slate-400 text-lg">
+          No projects found for this category yet.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-      {projects.map((project) => (
+      {filtered.map((project) => (
         <Link
           key={project.title}
           href={project.link}
@@ -39,7 +71,7 @@ export default function ProjectGrid() {
             <img
               alt={project.title}
               src={project.image}
-              className="w-full h-full object-cover"
+              className="w-full h-full content-cover "
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all flex items-center justify-center">
               <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity">

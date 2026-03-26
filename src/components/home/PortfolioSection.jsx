@@ -5,7 +5,7 @@ export default function PortfolioSection() {
     {
       image: "/project-images/aliflaila.png",
       tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS","Laravel"],
-      title: "Aliflaila",
+      title: "AlifLaila",
       link: "https://aliflaila.app/",
     },
     {
@@ -37,7 +37,7 @@ export default function PortfolioSection() {
           {projects.map((project, index) => (
             <Link key={index} className="group cursor-pointer" href={project.link} target="_blank" rel="noopener noreferrer">
               <div className="relative rounded-2xl overflow-hidden bg-slate-100 aspect-video mb-6 shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
-                <img alt="Project Portfolio" className="w-full h-full object-cover" src={project.image} />
+                <img alt="Project Portfolio" className="w-full h-full content-cover" src={project.image} />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <span className="px-6 py-2 bg-white text-primary font-bold rounded-full">View Case Study</span>
                 </div>

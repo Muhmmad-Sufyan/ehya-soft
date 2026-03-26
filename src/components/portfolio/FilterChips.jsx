@@ -1,19 +1,24 @@
-export default function FilterChips() {
-  const filters = [
-    { label: "All Projects", active: true },
-    { label: "Web Apps", active: false },
-    { label: "Mobile", active: false },
-    { label: "Cloud", active: false },
-    { label: "AI & ML", active: false },
-  ];
+"use client";
 
+export const filters = [
+  { id: "all", label: "All Projects" },
+  { id: "web-apps", label: "Web Apps" },
+  { id: "mobile-apps", label: "Mobile Apps" },
+  { id: "dashboards", label: "Dashboards" },
+  { id: "agentic-ai", label: "Agentic AI" },
+  { id: "rag-graphrag", label: "RAG/GraphRAG" },
+  { id: "ai-ml", label: "AI & ML" },
+];
+
+export default function FilterChips({ activeFilter, onFilterChange }) {
   return (
     <div className="flex flex-wrap gap-3 mb-12">
       {filters.map((filter) => (
         <button
-          key={filter.label}
+          key={filter.id}
+          onClick={() => onFilterChange(filter.id)}
           className={
-            filter.active
+            activeFilter === filter.id
               ? "px-6 py-2 rounded-full bg-primary text-white text-sm font-bold"
               : "px-6 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-semibold hover:bg-primary/10 hover:text-primary transition-all"
           }

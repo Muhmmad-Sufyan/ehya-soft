@@ -1,6 +1,5 @@
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
-import FilterChips from "@/components/portfolio/FilterChips";
-import ProjectGrid from "@/components/portfolio/ProjectGrid";
+import PortfolioFilter from "@/components/portfolio/PortfolioFilter";
 import Testimonials from "@/components/portfolio/Testimonials";
 import PortfolioCTA from "@/components/portfolio/PortfolioCTA";
 
@@ -15,8 +14,7 @@ export default function PortfolioPage() {
     <>
       <div className="max-w-7xl mx-auto px-6 py-12">
         <PortfolioHero />
-        <FilterChips />
-        <ProjectGrid />
+        <PortfolioFilter />
       </div>
       <Testimonials />
       <div className="max-w-7xl mx-auto px-6">
