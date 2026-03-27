@@ -237,8 +237,7 @@ export default function TermsOfServicePage() {
                   location_on
                 </span>
                 <span>
-                  101 N Block, Plot 101 N, Model Town Extension Block N Model
-                  Town, Lahore, 54700
+                  101 N, Block N Model Town, Lahore, Punjab
                 </span>
               </div>
             </div>

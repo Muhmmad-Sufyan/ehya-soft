@@ -137,7 +137,7 @@ export default function ContactHero() {
                     Lahore
                   </p>
                   <p className="text-slate-500">
-                    101 N Block, Plot 101 N, Model Town Extension Block N Model Town, Lahore, 54700
+                    101 N, Block N Model Town, Lahore, Punjab
                   </p>
                 </div>
               </div>
