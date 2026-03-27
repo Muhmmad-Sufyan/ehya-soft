@@ -51,6 +51,19 @@ const services = [
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAPbTKSsVdqmR7VojAYu-HHdWEwI26fzLOLAB9WvtWrxhR47ILuuMsz9gwRi6_CSjbH5ZYUYWmhheJN__6SL4CNWin8jwov-4zleNcbmXwdGZ-xxyvzYROZvzqC-h7-8pSppwQcnaLwW8dVy--46XjSdjK4vDGfVtYan4Bbf1GdYoM0Rcf94oLF4e4fwwnoDqvlRcgZj3Mtx7KFLYMcegaQxW5Kcna-zYhOnHg3KNwnnGGJhtqSA1dKmmS9edHPug_KIJdEcwD3A_o",
   },
+  {
+    icon: "smart_toy",
+    title: "AI Agents & Intelligent Automation",
+    description:
+      "We build production-ready AI systems that go beyond basic chat experiences. From Agentic AI and autonomous agents to RAG pipelines and Graph RAG architectures, our solutions help businesses automate complex workflows, unlock connected knowledge, and deliver faster, smarter decisions at scale.",
+    bullets: [
+      "AI Agents for workflow automation",
+      "RAG & Graph RAG knowledge systems",
+      "Custom LLM applications & enterprise AI integration",
+    ],
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAPbTKSsVdqmR7VojAYu-HHdWEwI26fzLOLAB9WvtWrxhR47ILuuMsz9gwRi6_CSjbH5ZYUYWmhheJN__6SL4CNWin8jwov-4zleNcbmXwdGZ-xxyvzYROZvzqC-h7-8pSppwQcnaLwW8dVy--46XjSdjK4vDGfVtYan4Bbf1GdYoM0Rcf94oLF4e4fwwnoDqvlRcgZj3Mtx7KFLYMcegaQxW5Kcna-zYhOnHg3KNwnnGGJhtqSA1dKmmS9edHPug_KIJdEcwD3A_o",
+  },
 ];
 
 export default function ServicesDeepDive() {

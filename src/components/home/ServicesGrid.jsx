@@ -17,6 +17,10 @@ export default function ServicesGrid() {
       description: "User-centric design that focuses on aesthetics, usability, and achieving your conversion goals.",
     },
     {
+      title: "AI Agents & Intelligent Automation",
+      description: "Production-ready AI systems — from Agentic AI and autonomous agents to RAG pipelines and Graph RAG architectures for smarter decisions at scale.",
+    },
+    {
       title: "Startup MVP",
       description: "Speed to market. We build lean, scalable Minimum Viable Products to validate your idea fast.",
     },
