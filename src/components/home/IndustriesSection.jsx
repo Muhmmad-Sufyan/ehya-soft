@@ -51,9 +51,9 @@ export default function IndustriesSection() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="industries">
+    <section className="py-12 md:py-24 bg-white" id="industries">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-4">Industries We Empower</h2>
           <p className="text-slate-600">Deep domain expertise across various complex sectors.</p>
         </div>

@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-32">
+    <section className="relative overflow-hidden pt-20 pb-16 md:pb-32">
       <div className="hero-glow -top-40 -left-40 bg-blue-500/20"></div>
       <div className="hero-glow bottom-0 -right-20 opacity-50"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-6">
             Premium Software Studio
           </span>

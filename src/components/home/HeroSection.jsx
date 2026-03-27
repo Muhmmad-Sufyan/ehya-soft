@@ -18,11 +18,11 @@ export default function HeroSection() {
             <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
               EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link className="px-8 py-4 text-white font-bold rounded-custom hover:shadow-xl transition-all gradient-bg" href="/contact">
+            <div className="flex gap-3 sm:gap-4">
+              <Link className="px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white font-bold rounded-custom hover:shadow-xl transition-all gradient-bg whitespace-nowrap" href="/contact">
                 Start Your Project
               </Link>
-              <Link className="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-custom hover:bg-slate-50 transition-all" href="/portfolio">
+              <Link className="px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-white border border-slate-200 text-slate-700 font-bold rounded-custom hover:bg-slate-50 transition-all whitespace-nowrap" href="/portfolio">
                 View Portfolio
               </Link>
             </div>

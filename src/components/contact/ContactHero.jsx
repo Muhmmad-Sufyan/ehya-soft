@@ -4,7 +4,7 @@ export default function ContactHero() {
   return (
     <>
       {/* Hero Title */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-12 md:mb-20">
         <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-6">
           Let&apos;s build the <span className="gradient-text">future</span> together.
         </h1>

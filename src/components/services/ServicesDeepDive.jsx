@@ -68,8 +68,8 @@ const services = [
 
 export default function ServicesDeepDive() {
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6 space-y-32">
+    <section className="py-12 md:py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 space-y-16 md:space-y-32">
         {services.map((service, index) => {
           const isReversed = index % 2 !== 0;
           return (

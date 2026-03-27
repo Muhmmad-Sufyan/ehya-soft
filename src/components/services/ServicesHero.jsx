@@ -1,6 +1,6 @@
 export default function ServicesHero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-32">
+    <section className="relative overflow-hidden pt-20 pb-16 md:pb-32">
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 blur-3xl pointer-events-none">
         <div className="hero-glow -top-40 -right-40 bg-blue-500/20"></div>
         <div className="hero-glow bottom-0 -left-20 opacity-50"></div>

@@ -1,7 +1,7 @@
 export default function ContactCTA() {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24 text-center">
-      <div className="rounded-[3rem] p-12 lg:p-24 relative overflow-hidden group gradient-bg">
+    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-12 md:py-24 text-center">
+      <div className="rounded-2xl md:rounded-[3rem] p-8 md:p-12 lg:p-24 relative overflow-hidden group gradient-bg">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
         <div className="relative z-10">

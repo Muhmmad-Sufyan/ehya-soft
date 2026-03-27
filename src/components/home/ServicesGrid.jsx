@@ -31,9 +31,9 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="services">
+    <section className="py-12 md:py-24 bg-white" id="services">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-4">Our Services</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
             We offer comprehensive software development solutions tailored to help your business scale effortlessly in the digital era.

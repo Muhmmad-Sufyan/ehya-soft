@@ -31,9 +31,9 @@ const steps = [
 
 export default function AgileMethodology() {
   return (
-    <section className="py-24">
+    <section className="py-12 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest mb-4">
             How We Work
           </span>

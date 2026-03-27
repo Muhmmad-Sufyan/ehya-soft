@@ -42,9 +42,9 @@ function StarRating() {
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 py-20 px-6 mb-20">
+    <section className="bg-slate-50 py-12 md:py-20 px-6 mb-12 md:mb-20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>
             <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">
               Testimonials

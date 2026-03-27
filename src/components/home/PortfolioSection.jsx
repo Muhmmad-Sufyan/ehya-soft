@@ -4,13 +4,13 @@ export default function PortfolioSection() {
   const projects = [
     {
       image: "/project-images/aliflaila.jpeg",
-      tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS","Laravel"],
+      tags: ["React Native", "Next.js", "Node.js", "MySQL","Laravel"],
       title: "AlifLaila Kids Digital Library",
       link: "https://aliflaila.app/",
     },
     {
       image: "/project-images/classmate.jpeg",
-      tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS"],
+      tags: ["React Native", "Next.js", "Node.js"],
       title: "Ehya Classmate",
       link: "https://classmate.ehya.com.pk/",
     },

@@ -6,7 +6,7 @@ const projects = [
   {
     title: "AlifLaila Kids Digital Library",
     categoryId: ["mobile-apps","web-apps","dashboards"],
-    tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS", "Laravel"],
+    tags: ["React Native", "Next.js", "Node.js", "MySQL", "Laravel"],
     description:
       "A feature-rich storytelling and reading platform built with React Native and a robust backend, delivering an immersive experience for users worldwide.",
     image: "/project-images/aliflaila.jpeg",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Ehya Classmate",
     categoryId: ["web-apps","mobile-apps","dashboards","ai-ml",'agentic-ai'],
-    tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS",],
+    tags: ["React Native", "Next.js", "Node.js"],
     description:
       "An innovative education platform connecting students and teachers with smart tools for learning, collaboration, and classroom management.",
     image: "/project-images/classmate.jpeg",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "FIELDx AI",
     categoryId: ["ai-ml","web-apps" ,"mobile-apps","dashboards","agentic-ai","rag-graphrag"],
-    tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS"],
+    tags: ["React Native", "Next.js", "Node.js", "MySQL"],
     description:
       "An AI-powered field operations platform that streamlines data collection, analysis, and team coordination for enterprises.",
     image: "/project-images/fieldx.jpeg",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Ittesaal - Journal of Connecting Discourses",
     categoryId: ["web-apps"],
-    tags: ["Next.js", "Node.js", "MongoDB", "AWS"],
+    tags: ["Next.js", "Node.js",],
     description:
       "A peer-reviewed academic journal platform by Ehya Education Services, facilitating scholarly discourse and research publication.",
     image: "/project-images/ittesaal.jpeg",

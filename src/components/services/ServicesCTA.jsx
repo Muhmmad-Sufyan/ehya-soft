@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function ServicesCTA() {
   return (
-    <section className="py-24">
+    <section className="py-12 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="gradient-bg rounded-3xl p-12 md:p-20 text-center">
+        <div className="gradient-bg rounded-3xl p-8 md:p-12 lg:p-20 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
             Ready to Build the Future?
           </h2>
