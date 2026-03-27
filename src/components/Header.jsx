@@ -2,9 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
@@ -18,12 +25,26 @@ export default function Header() {
               EhyaSoft
             </Link>
           </div>
-          <div className="hidden md:flex items-center space-x-10">
-            <Link className="text-sm font-semibold text-slate-600 hover:text-accent transition-colors" href="/">Home</Link>
-            <Link className="text-sm font-semibold text-slate-600 hover:text-accent transition-colors" href="/about">About</Link>
-            <Link className="text-sm font-semibold text-slate-600 hover:text-accent transition-colors" href="/services">Services</Link>
-            <Link className="text-sm font-semibold text-slate-600 hover:text-accent transition-colors" href="/portfolio">Portfolio</Link>
-            <Link className="text-sm font-semibold text-slate-600 hover:text-accent transition-colors" href="/contact">Contact</Link>
+          <div className="hidden md:flex items-center space-x-2">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/services', label: 'Services' },
+              { href: '/portfolio', label: 'Portfolio' },
+              { href: '/contact', label: 'Contact' },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`text-sm font-semibold px-4 py-2 rounded-full transition-all ${
+                  isActive(href)
+                    ? 'bg-accent/10 text-accent'
+                    : 'text-slate-600 hover:text-accent hover:bg-slate-100'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
           <div className="hidden md:flex items-center">
             <Link className="gradient-bg text-white px-6 py-3 rounded-custom text-sm font-bold transition-all transform hover:scale-105 vibrant-shadow" href="/contact">
@@ -42,11 +63,26 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate-100">
           <div className="px-4 py-4 space-y-3">
-            <Link className="block text-sm font-semibold text-slate-600 hover:text-accent transition-colors py-2" href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link className="block text-sm font-semibold text-slate-600 hover:text-accent transition-colors py-2" href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link className="block text-sm font-semibold text-slate-600 hover:text-accent transition-colors py-2" href="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link className="block text-sm font-semibold text-slate-600 hover:text-accent transition-colors py-2" href="/portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-            <Link className="block text-sm font-semibold text-slate-600 hover:text-accent transition-colors py-2" href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/services', label: 'Services' },
+              { href: '/portfolio', label: 'Portfolio' },
+              { href: '/contact', label: 'Contact' },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block text-sm font-semibold transition-all py-2 px-4 rounded-lg ${
+                  isActive(href)
+                    ? 'bg-accent/10 text-accent'
+                    : 'text-slate-600 hover:text-accent hover:bg-slate-50'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
             <Link className="block gradient-bg text-white px-6 py-3 rounded-custom text-sm font-bold text-center vibrant-shadow" href="/contact" onClick={() => setMobileMenuOpen(false)}>Request a Quote</Link>
           </div>
         </div>

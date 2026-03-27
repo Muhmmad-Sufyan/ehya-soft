@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"\\\\.active\\\\|nav-link.*active\" 'd:\\\\Ehya education\\\\ees-website-next\\\\src' --include=*.css)"
+    ]
+  }
+}

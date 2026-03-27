@@ -75,7 +75,7 @@ export default function ProjectGrid({ activeFilter }) {
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
               <span className="px-6 py-2.5 bg-white text-primary font-bold rounded-full text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                Visit
+                Visit Website
               </span>
             </div>
           </div>
