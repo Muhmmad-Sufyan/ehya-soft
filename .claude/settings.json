@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -r \"\\\\.active\\\\|nav-link.*active\" 'd:\\\\Ehya education\\\\ees-website-next\\\\src' --include=*.css)"
+      "Bash(grep -r \"\\\\.active\\\\|nav-link.*active\" 'd:\\\\Ehya education\\\\ees-website-next\\\\src' --include=*.css)",
+      "Bash(mv \"Thumbnail AlifLaila.jpg.jpeg\" \"aliflaila.jpeg\")",
+      "Bash(mv \"Thumbnail E School.jpg.jpeg\" \"classmate.jpeg\")",
+      "Bash(mv \"Thumbnail Fieldx.jpg.jpeg\" \"fieldx.jpeg\")",
+      "Bash(mv \"Ittesaal Book.jpg.jpeg\" \"ittesaal.jpeg\")"
     ]
   }
 }

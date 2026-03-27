@@ -9,7 +9,7 @@ const projects = [
     tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS", "Laravel"],
     description:
       "A feature-rich storytelling and reading platform built with React Native and a robust backend, delivering an immersive experience for users worldwide.",
-    image: "/project-images/aliflaila.png",
+    image: "/project-images/aliflaila.jpeg",
     link: "https://aliflaila.app/",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS",],
     description:
       "An innovative education platform connecting students and teachers with smart tools for learning, collaboration, and classroom management.",
-    image: "/project-images/classmate.png",
+    image: "/project-images/classmate.jpeg",
     link: "https://classmate.ehya.com.pk/",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     tags: ["Next.js", "Node.js", "MongoDB", "AWS"],
     description:
       "A peer-reviewed academic journal platform by Ehya Education Services, facilitating scholarly discourse and research publication.",
-    image: "/project-images/ijcd.jpg",
+    image: "/project-images/ittesaal.jpeg",
     link: "https://journal.ehya.com.pk/ijcd",
   },
 ];

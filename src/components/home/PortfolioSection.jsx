@@ -3,13 +3,13 @@ import Link from "next/link";
 export default function PortfolioSection() {
   const projects = [
     {
-      image: "/project-images/aliflaila.png",
+      image: "/project-images/aliflaila.jpeg",
       tags: ["React Native", "Next.js", "Node.js", "MySQL", "AWS","Laravel"],
       title: "AlifLaila Kids Digital Library",
       link: "https://aliflaila.app/",
     },
     {
-      image: "/project-images/classmate.png",
+      image: "/project-images/classmate.jpeg",
       tags: ["React Native", "Next.js", "Node.js", "MongoDB", "AWS"],
       title: "Ehya Classmate",
       link: "https://classmate.ehya.com.pk/",
