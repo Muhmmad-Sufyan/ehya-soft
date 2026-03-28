@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h5 className="font-bold mb-6 text-slate-900">Services</h5>
             <ul className="space-y-4 text-sm text-slate-500">
-              <li><Link className="hover:text-primary transition-colors" href="/services">Web Development</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services">Mobile Development</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services">UI/UX Design</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services">Quality Assurance</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/services#web-development">Web Development</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/services#mobile-development">Mobile Development</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/services#ui-ux-design">UI/UX Design</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/services#enterprise-software">Enterprise Software</Link></li>
             </ul>
           </div>
           <div>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-400">
-          <p>&copy; 2019 EhyaSoft by Ehya Education Services. All rights reserved.</p>
+          <p>&copy; 2019 EhyaSoft by <a href="https://ehya.com.pk/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline">Ehya Education Services</a>. All rights reserved.</p>
           {/* <p>Made with passion for the digital frontier.</p> */}
         </div>
       </div>

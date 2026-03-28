@@ -1,5 +1,6 @@
 const services = [
   {
+    id: "web-development",
     icon: "globe",
     title: "Web Development",
     description:
@@ -13,6 +14,7 @@ const services = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuA4B2spXqbMMNAQtGHDxff5Bc5tkkoKC5kMVPPZEJGX5xhl7mgWCgsAT9foWREVafyxRua2oqfY-MleC8KCqZRH_UbIl8mwQC3T-yRkn-mDjzfKZQ0S1Wr5dEB-F7ZBP4UBsErb2M6qA6vgO42qQZaUKUbTe5lwPykdvlNwd3Hncle7XM9l9TmpkOj2TtigLPVA3SzQt3laQMA_21GRJe3iR3qwgqnNfjzVjOWYCUhXhqww-WihNPUS71B370V7zaQxy-htPTdlcss",
   },
   {
+    id: "mobile-development",
     icon: "smartphone",
     title: "Mobile Experiences",
     description:
@@ -26,6 +28,7 @@ const services = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuCyCAxegtuILIJF8z_z0OAbbSw7HNZpP3JprFHm9Vdos8HTfbhARlM5abcCSjRW_-NKBdk3qHCxvnJk8M9SkKP66SIHEMvev3hQS6bOjqW49BGt3V8ZChd8S4UAlGB7FYynxYukTNQQVIHYFNHCBkNf8UbqBGZBSO5nO-4XdEx5ak80m6F9T1tBJXWffkEPArjuWWgpI-IdWd1QhmVu3iTDO8iJmcxMJ2Rt1mZRHO_B2F_ZjApxmPk1Ts39QhwhTm6x7lPPQifDtQM",
   },
   {
+    id: "enterprise-software",
     icon: "terminal",
     title: "Custom Enterprise Software",
     description:
@@ -39,6 +42,7 @@ const services = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuALM8f8k_0R3yPFdDnIqdAm5XamPfd5JEN05VYtbmfSXjFrheLWDRlYscYA47oWefrFp8_aiQFbMYdg3AdtIXTufyaLkNjFPfGAekRU8fy0W7H6p0qzeENAlJm_kGn-_t_wm_bUyM1GZ86e60wsLfFi-5QFdEmwSI_J4mE5WkYWDnd1i8h4sCs-gamg3W_lrBjTwCDyoFoXR6JANQ5F9DcUU0nS70Fb-5duVWPDB-aQBt1dok-RsfodwX7Q0jHFEbxwpT7Ga8NJxL4",
   },
   {
+    id: "ui-ux-design",
     icon: "palette",
     title: "UI/UX Design Systems",
     description:
@@ -52,6 +56,7 @@ const services = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAPbTKSsVdqmR7VojAYu-HHdWEwI26fzLOLAB9WvtWrxhR47ILuuMsz9gwRi6_CSjbH5ZYUYWmhheJN__6SL4CNWin8jwov-4zleNcbmXwdGZ-xxyvzYROZvzqC-h7-8pSppwQcnaLwW8dVy--46XjSdjK4vDGfVtYan4Bbf1GdYoM0Rcf94oLF4e4fwwnoDqvlRcgZj3Mtx7KFLYMcegaQxW5Kcna-zYhOnHg3KNwnnGGJhtqSA1dKmmS9edHPug_KIJdEcwD3A_o",
   },
   {
+    id: "ai-agents",
     icon: "smart_toy",
     title: "AI Agents & Intelligent Automation",
     description:
@@ -74,6 +79,7 @@ export default function ServicesDeepDive() {
           const isReversed = index % 2 !== 0;
           return (
             <div
+              id={service.id}
               key={service.title}
               className={`grid lg:grid-cols-2 gap-16 items-center ${
                 isReversed ? "lg:flex-row-reverse" : ""
