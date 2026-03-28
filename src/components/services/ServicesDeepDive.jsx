@@ -81,7 +81,7 @@ export default function ServicesDeepDive() {
             <div
               id={service.id}
               key={service.title}
-              className={`grid lg:grid-cols-2 gap-16 items-center ${
+              className={`scroll-mt-32 grid lg:grid-cols-2 gap-16 items-center ${
                 isReversed ? "lg:flex-row-reverse" : ""
               }`}
             >
