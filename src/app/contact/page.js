@@ -12,7 +12,7 @@ export default function ContactPage() {
       <main className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-24">
         <ContactHero />
       </main>
-      <MapSection />
+      {/* <MapSection /> */}
       <ContactCTA />
     </>
   );
