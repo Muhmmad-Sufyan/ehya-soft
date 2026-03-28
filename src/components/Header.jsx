@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-custom flex items-center justify-center shadow-lg shadow-primary/20">
-              <span className="text-white font-bold text-xl">E</span>
+              <span className="text-white font-bold text-xl">ES</span>
             </div>
             <Link href="/" className="font-bold text-2xl tracking-tight text-slate-900">
               EhyaSoft

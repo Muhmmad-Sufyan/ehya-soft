@@ -16,7 +16,7 @@ export default function PortfolioPage() {
         <PortfolioHero />
         <PortfolioFilter />
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <div className="max-w-7xl mx-auto px-6">
         <PortfolioCTA />
       </div>

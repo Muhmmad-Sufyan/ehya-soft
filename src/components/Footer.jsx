@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-primary rounded-custom flex items-center justify-center">
-                <span className="text-white font-bold">E</span>
+                <span className="text-white font-bold">ES</span>
               </div>
               <span className="font-bold text-xl tracking-tight">EhyaSoft</span>
             </div>
@@ -41,10 +41,10 @@ export default function Footer() {
           <div>
             <h5 className="font-bold mb-6 text-slate-900">Services</h5>
             <ul className="space-y-4 text-sm text-slate-500">
-              <li><Link className="hover:text-primary transition-colors" href="/services#web-development">Web Development</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services#mobile-development">Mobile Development</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services#ui-ux-design">UI/UX Design</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/services#enterprise-software">Enterprise Software</Link></li>
+              <li><a className="hover:text-primary transition-colors" href="/services/#web-development">Web Development</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services/#mobile-development">Mobile Development</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services/#ai-agents">AI Agents &amp; Automation</a></li>
+              <li><a className="hover:text-primary transition-colors" href="/services/#enterprise-software">Enterprise Software</a></li>
             </ul>
           </div>
           <div>

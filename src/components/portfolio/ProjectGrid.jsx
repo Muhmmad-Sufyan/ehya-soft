@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Ittesaal - Journal of Connecting Discourses",
     categoryId: ["web-apps"],
-    tags: ["Next.js", "Node.js",],
+    tags: ["OJS"],
     description:
       "A peer-reviewed academic journal platform by Ehya Education Services, facilitating scholarly discourse and research publication.",
     image: "/project-images/ittesaal.jpeg",

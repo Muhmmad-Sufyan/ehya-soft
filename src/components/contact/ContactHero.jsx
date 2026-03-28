@@ -17,7 +17,7 @@ export default function ContactHero() {
       {/* Two Column Grid */}
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT: Contact Form */}
-        <div className="relative">
+        <div id="contact-form" className="relative scroll-mt-32">
           {/* Decorative gradient blur */}
           <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/20 rounded-[2rem] blur-3xl -z-10" />
 
@@ -126,7 +126,7 @@ export default function ContactHero() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors">
                   <span className="material-symbols-outlined text-primary">
                     location_on
@@ -140,7 +140,7 @@ export default function ContactHero() {
                    Al-Karim Park (Butt Colony) 1KM Zafarwal Rd
                   </p>
                 </div>
-              </div>
+              </div> */}
              
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function ContactHero() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors">
                   <span className="material-symbols-outlined text-primary">
                     call
@@ -180,7 +180,7 @@ export default function ContactHero() {
                     (042) 35164921
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "EhyaSoft | Premium Software Development Agency",
   description: "EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
