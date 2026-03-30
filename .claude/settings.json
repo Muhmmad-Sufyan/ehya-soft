@@ -5,7 +5,8 @@
       "Bash(mv \"Thumbnail AlifLaila.jpg.jpeg\" \"aliflaila.jpeg\")",
       "Bash(mv \"Thumbnail E School.jpg.jpeg\" \"classmate.jpeg\")",
       "Bash(mv \"Thumbnail Fieldx.jpg.jpeg\" \"fieldx.jpeg\")",
-      "Bash(mv \"Ittesaal Book.jpg.jpeg\" \"ittesaal.jpeg\")"
+      "Bash(mv \"Ittesaal Book.jpg.jpeg\" \"ittesaal.jpeg\")",
+      "WebSearch"
     ]
   }
 }

@@ -162,7 +162,7 @@ export default function ContactHero() {
                     Email
                   </p>
                   <p className="text-slate-500">
-                    hello@ehya.com.pk
+                    soft@ehya.com.pk
                   </p>
                 </div>
               </div>

@@ -67,7 +67,7 @@ const services = [
       "Custom LLM applications & enterprise AI integration",
     ],
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAPbTKSsVdqmR7VojAYu-HHdWEwI26fzLOLAB9WvtWrxhR47ILuuMsz9gwRi6_CSjbH5ZYUYWmhheJN__6SL4CNWin8jwov-4zleNcbmXwdGZ-xxyvzYROZvzqC-h7-8pSppwQcnaLwW8dVy--46XjSdjK4vDGfVtYan4Bbf1GdYoM0Rcf94oLF4e4fwwnoDqvlRcgZj3Mtx7KFLYMcegaQxW5Kcna-zYhOnHg3KNwnnGGJhtqSA1dKmmS9edHPug_KIJdEcwD3A_o",
+      "/ai.png",
   },
 ];
 
@@ -90,8 +90,8 @@ export default function ServicesDeepDive() {
                 className={`order-1 ${isReversed ? "lg:order-2" : "lg:order-1"}`}
               >
                 <div
-                  className="glass-card aspect-video rounded-2xl bg-cover bg-center"
-                  style={{ backgroundImage: `url(${service.image})` }}
+                  className="glass-card aspect-video rounded-2xl"
+                  style={{ backgroundImage: `url(${service.image})`,backgroundSize:'100% 100%' }}
                 />
               </div>
 

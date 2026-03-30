@@ -224,7 +224,7 @@ export default function TermsOfServicePage() {
                 <span className="material-symbols-outlined text-primary">
                   mail
                 </span>
-                <span>hello@ehya.com.pk</span>
+                <span>soft@ehya.com.pk</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">

@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong>Communication Data:</strong> Records of correspondence
-                when you contact us via email at hello@ehya.com.pk or by phone
+                when you contact us via email at soft@ehya.com.pk or by phone
                 at (042) 35164921.
               </li>
               <li>
@@ -185,7 +185,7 @@ export default function PrivacyPolicyPage() {
                 <span className="material-symbols-outlined text-primary">
                   mail
                 </span>
-                <span>hello@ehya.com.pk</span>
+                <span>soft@ehya.com.pk</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">
