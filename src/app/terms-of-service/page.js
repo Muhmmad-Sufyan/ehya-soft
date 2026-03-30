@@ -226,12 +226,12 @@ export default function TermsOfServicePage() {
                 </span>
                 <span>soft@ehya.com.pk</span>
               </div>
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">
                   call
                 </span>
                 <span>(042) 35164921</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">
                   location_on
