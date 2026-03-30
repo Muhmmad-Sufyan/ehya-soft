@@ -1,6 +1,52 @@
 "use client";
 
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+
 export default function ContactHero() {
+  const recaptchaRef = useRef(null);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!captchaToken) {
+      setStatus("captcha");
+      return;
+    }
+
+    setStatus("loading");
+
+    try {
+      const formData = new FormData(e.target);
+      const data = {
+        fullName: formData.get("fullName"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+        recaptchaToken: captchaToken,
+      };
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        e.target.reset();
+        setCaptchaToken(null);
+        recaptchaRef.current?.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       {/* Hero Title */}
@@ -22,7 +68,7 @@ export default function ContactHero() {
           <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/20 rounded-[2rem] blur-3xl -z-10" />
 
           <div className="glass-card rounded-3xl p-8 lg:p-10">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Full Name + Email */}
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
@@ -35,8 +81,10 @@ export default function ContactHero() {
                   <input
                     className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                     id="fullName"
+                    name="fullName"
                     placeholder="John Doe"
                     type="text"
+                    required
                   />
                 </div>
                 <div>
@@ -49,8 +97,10 @@ export default function ContactHero() {
                   <input
                     className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                     id="email"
+                    name="email"
                     placeholder="john@example.com"
                     type="email"
+                    required
                   />
                 </div>
               </div>
@@ -66,6 +116,8 @@ export default function ContactHero() {
                 <select
                   className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all appearance-none"
                   id="subject"
+                  name="subject"
+                  required
                 >
                   <option value="">Select a subject</option>
                   <option value="project">Project Inquiry</option>
@@ -86,17 +138,41 @@ export default function ContactHero() {
                 <textarea
                   className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
                   id="message"
+                  name="message"
                   placeholder="Tell us about your project..."
                   rows={5}
+                  required
                 />
               </div>
 
+              {/* reCAPTCHA */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  onChange={(token) => setCaptchaToken(token)}
+                  onExpired={() => setCaptchaToken(null)}
+                />
+              </div>
+
+              {/* Status Message */}
+              {status === "captcha" && (
+                <p className="text-red-600 font-medium text-sm text-center">Please complete the captcha verification.</p>
+              )}
+              {status === "success" && (
+                <p className="text-green-600 font-medium text-sm text-center">Message sent successfully!</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-600 font-medium text-sm text-center">Something went wrong. Please try again.</p>
+              )}
+
               {/* Send Button */}
               <button
-                className="w-full gradient-bg text-white font-black py-4 px-8 rounded-xl flex items-center justify-center gap-3 hover:shadow-xl transition-all vibrant-shadow"
+                className="w-full gradient-bg text-white font-black py-4 px-8 rounded-xl flex items-center justify-center gap-3 hover:shadow-xl transition-all vibrant-shadow disabled:opacity-60"
                 type="submit"
+                disabled={status === "loading"}
               >
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
                 <span className="material-symbols-outlined">send</span>
               </button>
             </form>
