@@ -188,8 +188,16 @@ export default function ContactHero() {
               </div>
 
               {/* reCAPTCHA */}
-              <div className="flex justify-center">
-                <div ref={captchaContainerRef}></div>
+              <div className="flex justify-center relative">
+                {!captchaReady && (
+                  <div className="absolute inset-0 flex justify-center">
+                    <div className="w-[302px] h-[76px] rounded-md border border-slate-200 bg-slate-50 flex items-center gap-3 px-4 animate-pulse">
+                      <div className="w-7 h-7 rounded border border-slate-300 bg-white shrink-0"></div>
+                      <div className="h-4 w-32 bg-slate-200 rounded"></div>
+                    </div>
+                  </div>
+                )}
+                <div ref={captchaContainerRef} className={captchaReady ? "" : "invisible"}></div>
               </div>
 
               {/* Status Message */}
