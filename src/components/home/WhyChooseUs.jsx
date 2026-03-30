@@ -57,12 +57,12 @@ export default function WhyChooseUs() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-tr from-primary/40 to-accent/20 rounded-3xl p-8 flex items-center justify-center border border-white/10 overflow-hidden">
-              <div className="grid grid-cols-2 gap-4">
+            <div className="aspect-square bg-gradient-to-tr from-primary/40 to-accent/20 rounded-3xl p-4 md:p-8 flex items-center justify-center border border-white/10 overflow-hidden">
+              <div className="grid grid-cols-2 gap-3 md:gap-4 w-full">
                 {stats.map((stat, index) => (
-                  <div key={index} className={`p-8 glass-card !bg-white/5 rounded-2xl text-center ${stat.offsetTop ? "mt-8" : ""}`}>
-                    <div className="text-4xl font-extrabold mb-1">{stat.value}</div>
-                    <div className="text-xs text-slate-400 uppercase tracking-widest">{stat.label}</div>
+                  <div key={index} className={`p-4 md:p-8 glass-card !bg-white/5 rounded-2xl text-center ${stat.offsetTop ? "md:mt-8" : ""}`}>
+                    <div className="text-2xl md:text-4xl font-extrabold mb-1">{stat.value}</div>
+                    <div className="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest">{stat.label}</div>
                   </div>
                 ))}
               </div>

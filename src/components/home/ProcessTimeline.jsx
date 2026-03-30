@@ -35,22 +35,26 @@ export default function ProcessTimeline() {
           <p className="text-slate-600">From initial concept to final deployment, we follow a proven methodology.</p>
         </div>
         <div className="relative">
-          {/* Connecting Line */}
+          {/* Connecting Line - Desktop */}
           <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-200"></div>
-          <div className="grid lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Connecting Line - Mobile */}
+          <div className="lg:hidden absolute top-0 bottom-0 left-7 w-0.5 bg-slate-200"></div>
+          <div className="grid lg:grid-cols-4 gap-6 lg:gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="relative text-center">
+              <div key={index} className="relative flex items-start gap-4 lg:block lg:text-center">
                 <div
-                  className={`w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-slate-50 z-10 relative ${
+                  className={`w-14 h-14 lg:w-24 lg:h-24 rounded-full flex items-center justify-center shrink-0 lg:mx-auto lg:mb-6 shadow-lg lg:shadow-xl border-4 border-slate-50 z-10 relative ${
                     step.gradient ? "gradient-bg" : "bg-white"
                   }`}
                 >
-                  <span className={`text-2xl font-bold ${step.gradient ? "text-white" : "text-primary"}`}>
+                  <span className={`text-lg lg:text-2xl font-bold ${step.gradient ? "text-white" : "text-primary"}`}>
                     {step.number}
                   </span>
                 </div>
-                <h4 className="text-xl font-bold mb-3">{step.title}</h4>
-                <p className="text-slate-500 text-sm">{step.description}</p>
+                <div className="pt-1 lg:pt-0">
+                  <h4 className="text-lg lg:text-xl font-bold mb-1 lg:mb-3">{step.title}</h4>
+                  <p className="text-slate-500 text-sm">{step.description}</p>
+                </div>
               </div>
             ))}
           </div>
