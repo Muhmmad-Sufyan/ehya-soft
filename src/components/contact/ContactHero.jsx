@@ -105,11 +105,11 @@ export default function ContactHero() {
       {/* Two Column Grid */}
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT: Contact Form */}
-        <div id="contact-form" className="relative scroll-mt-32">
+        <div id="contact-form" className="relative scroll-mt-32 max-w-lg mx-auto lg:max-w-none">
           {/* Decorative gradient blur */}
           <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/20 rounded-[2rem] blur-3xl -z-10" />
 
-          <div className="glass-card rounded-3xl p-8 lg:p-10">
+          <div className="glass-card rounded-3xl p-4 sm:p-8 lg:p-10">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Full Name + Email */}
               <div className="grid sm:grid-cols-2 gap-6">
@@ -188,16 +188,16 @@ export default function ContactHero() {
               </div>
 
               {/* reCAPTCHA */}
-              <div className="flex justify-center min-h-[78px] relative">
+              <div className="flex justify-center min-h-[78px] relative overflow-hidden">
                 {!captchaReady && (
-                  <div className="w-[302px] h-[76px] rounded-md border border-slate-200 bg-slate-50 flex items-center gap-3 px-4 animate-pulse">
+                  <div className="w-full max-w-[302px] h-[76px] rounded-md border border-slate-200 bg-slate-50 flex items-center gap-3 px-4 animate-pulse">
                     <div className="w-7 h-7 rounded border border-slate-300 bg-white shrink-0"></div>
                     <div className="h-4 w-32 bg-slate-200 rounded"></div>
                   </div>
                 )}
                 <div
                   ref={captchaContainerRef}
-                  className={captchaReady ? "" : "absolute opacity-0 pointer-events-none"}
+                  className={`origin-center scale-[0.85] sm:scale-100 ${captchaReady ? "" : "absolute opacity-0 pointer-events-none"}`}
                 ></div>
               </div>
 
