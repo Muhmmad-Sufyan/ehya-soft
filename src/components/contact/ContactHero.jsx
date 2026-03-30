@@ -1,12 +1,52 @@
 "use client";
 
-import { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useEffect, useRef, useState, useCallback } from "react";
+
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 export default function ContactHero() {
-  const recaptchaRef = useRef(null);
+  const captchaContainerRef = useRef(null);
+  const widgetIdRef = useRef(null);
   const [captchaToken, setCaptchaToken] = useState(null);
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [captchaReady, setCaptchaReady] = useState(false);
+  const [status, setStatus] = useState("idle");
+
+  const renderCaptcha = useCallback(() => {
+    if (
+      !captchaContainerRef.current ||
+      widgetIdRef.current !== null ||
+      !window.grecaptcha?.render
+    )
+      return;
+
+    widgetIdRef.current = window.grecaptcha.render(captchaContainerRef.current, {
+      sitekey: SITE_KEY,
+      callback: (token) => setCaptchaToken(token),
+      "expired-callback": () => setCaptchaToken(null),
+    });
+    setCaptchaReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (window.grecaptcha?.render) {
+      renderCaptcha();
+      return;
+    }
+
+    window.onRecaptchaLoad = () => renderCaptcha();
+
+    if (!document.querySelector('script[src*="recaptcha/api.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      delete window.onRecaptchaLoad;
+    };
+  }, [renderCaptcha]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -38,7 +78,9 @@ export default function ContactHero() {
         setStatus("success");
         e.target.reset();
         setCaptchaToken(null);
-        recaptchaRef.current?.reset();
+        if (widgetIdRef.current !== null) {
+          window.grecaptcha?.reset(widgetIdRef.current);
+        }
       } else {
         setStatus("error");
       }
@@ -147,12 +189,7 @@ export default function ContactHero() {
 
               {/* reCAPTCHA */}
               <div className="flex justify-center">
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  onChange={(token) => setCaptchaToken(token)}
-                  onExpired={() => setCaptchaToken(null)}
-                />
+                <div ref={captchaContainerRef}></div>
               </div>
 
               {/* Status Message */}
