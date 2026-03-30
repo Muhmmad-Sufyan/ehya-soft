@@ -7,7 +7,6 @@ export async function POST(request) {
     const { fullName, email, subject, message, recaptchaToken } =
       await request.json();
 
-    // Verify reCAPTCHA token with Google
     const recaptchaRes = await fetch(
       "https://www.google.com/recaptcha/api/siteverify",
       {
