@@ -9,7 +9,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      <main className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-24">
+      <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-12 py-12 lg:py-24">
         <ContactHero />
       </main>
       {/* <MapSection /> */}

@@ -105,11 +105,11 @@ export default function ContactHero() {
       {/* Two Column Grid */}
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT: Contact Form */}
-        <div id="contact-form" className="relative scroll-mt-32 max-w-lg mx-auto lg:max-w-none">
+        <div id="contact-form" className="relative scroll-mt-32">
           {/* Decorative gradient blur */}
           <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/20 rounded-[2rem] blur-3xl -z-10" />
 
-          <div className="glass-card rounded-3xl p-4 sm:p-8 lg:p-10">
+          <div className="glass-card rounded-3xl p-4 sm:p-8 lg:p-10 overflow-hidden">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Full Name + Email */}
               <div className="grid sm:grid-cols-2 gap-6">
