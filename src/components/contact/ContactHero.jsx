@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { RECAPTCHA_SITE_KEY } from "@/lib/constants";
 
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+const SITE_KEY = RECAPTCHA_SITE_KEY;
 
 export default function ContactHero() {
   const captchaContainerRef = useRef(null);
