@@ -1,4 +1,6 @@
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -21,6 +23,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-1 overflow-hidden">{children}</main>
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

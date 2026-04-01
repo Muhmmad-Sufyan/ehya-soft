@@ -1,44 +1,54 @@
 import { NextResponse } from "next/server";
-import { RECAPTCHA_SECRET_KEY } from "@/lib/constants";
+import {
+  CONTACT_API_BASE_URL,
+  CONTACT_API_ENDPOINT,
+  CONTACT_API_TOKEN,
+  CONTACT_RECEIVER_EMAIL,
+} from "@/lib/constants";
 
 export async function POST(request) {
   try {
-    const { fullName, email, subject, message, recaptchaToken } =
-      await request.json();
+    const { fullName, email, subject, message } = await request.json();
 
-    const recaptchaRes = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
+    const contactRes = await fetch(
+      `${CONTACT_API_BASE_URL}${CONTACT_API_ENDPOINT}`,
       {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `secret=${RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "X-Contact-Token": CONTACT_API_TOKEN,
+        },
+        body: JSON.stringify({
+          fullname: fullName,
+          email,
+          receiver: CONTACT_RECEIVER_EMAIL,
+          subject,
+          message,
+        }),
       }
     );
 
-    const recaptchaData = await recaptchaRes.json();
+    const responseText = await contactRes.text();
 
-    if (!recaptchaData.success) {
+    if (!contactRes.ok) {
+      console.error("Contact API error:", contactRes.status, responseText);
       return NextResponse.json(
-        { error: "reCAPTCHA verification failed" },
-        { status: 400 }
+        { error: "Failed to send message" },
+        { status: 500 }
       );
     }
 
-    // Log the verified contact form data
-    console.log("--- New Contact Form Submission ---");
-    console.log("Name:", fullName);
-    console.log("Email:", email);
-    console.log("Subject:", subject);
-    console.log("Message:", message);
-    console.log("----------------------------------");
+    let contactData;
+    try {
+      contactData = JSON.parse(responseText);
+    } catch {
+      contactData = { message: responseText };
+    }
 
-    // TODO: Send email or save to database here
-
-    return NextResponse.json({
-      success: true,
-      data: { fullName, email, subject, message },
-    });
-  } catch {
+    return NextResponse.json({ success: true, data: contactData });
+  } catch (err) {
+    console.error("Contact API error:", err);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

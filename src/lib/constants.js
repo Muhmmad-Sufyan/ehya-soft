@@ -2,6 +2,12 @@
 export const RECAPTCHA_SITE_KEY = "6Lfo-Z0sAAAAALXzKCh1ogzFpscJ8IBITbZ3larP";
 export const RECAPTCHA_SECRET_KEY = "6Lfo-Z0sAAAAAFs9qCfdZI_-aImHedIJqKmQr03H";
 
+// ─── Contact API ─────────────────────────────────────────────────────────────
+export const CONTACT_API_BASE_URL = "https://ees-api.ehya.com.pk";
+export const CONTACT_API_ENDPOINT = "/api/contact-gateway-x9p2k7-submit-3f1d8c";
+export const CONTACT_API_TOKEN = "ehya-contact-server-token-9f2c7d4a1b6e8k3m";
+export const CONTACT_RECEIVER_EMAIL = "soft@ehya.com.pk";
+
 // ─── Portfolio ───────────────────────────────────────────────────────────────
 
 // Change this value to control how many cards show per page (e.g. 5, 6, 8)
