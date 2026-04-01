@@ -62,14 +62,14 @@ export default function ContactHero() {
 
     try {
       const formData = new FormData(e.target);
-      const data = {
+
+      await axios.post("/api/contact", {
         fullName: formData.get("fullName"),
         email: formData.get("email"),
         subject: formData.get("subject"),
         message: formData.get("message"),
-      };
-
-      await axios.post("/api/contact", data);
+        captchaToken,
+      });
 
       setStatus("success");
       showToast("success", "Message sent successfully!");

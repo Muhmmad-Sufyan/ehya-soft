@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import {
+  RECAPTCHA_SECRET_KEY,
   CONTACT_API_BASE_URL,
   CONTACT_API_ENDPOINT,
   CONTACT_API_TOKEN,
@@ -8,8 +9,36 @@ import {
 
 export async function POST(request) {
   try {
-    const { fullName, email, subject, message } = await request.json();
+    const { fullName, email, subject, message, captchaToken } =
+      await request.json();
 
+    // Verify reCAPTCHA server-side
+    if (!captchaToken) {
+      return NextResponse.json(
+        { error: "Captcha verification required" },
+        { status: 400 }
+      );
+    }
+
+    const captchaRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `secret=${RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+      }
+    );
+
+    const captchaData = await captchaRes.json();
+
+    if (!captchaData.success) {
+      return NextResponse.json(
+        { error: "Captcha verification failed" },
+        { status: 403 }
+      );
+    }
+
+    // Send to external contact API
     const contactRes = await fetch(
       `${CONTACT_API_BASE_URL}${CONTACT_API_ENDPOINT}`,
       {
