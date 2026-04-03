@@ -2,7 +2,13 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import axios from "axios";
-import { RECAPTCHA_SITE_KEY } from "@/lib/constants";
+import {
+  RECAPTCHA_SITE_KEY,
+  CONTACT_API_BASE_URL,
+  CONTACT_API_ENDPOINT,
+  CONTACT_API_TOKEN,
+  CONTACT_RECEIVER_EMAIL,
+} from "@/lib/constants";
 import showToast from "@/components/ToastMessage";
 
 export default function ContactHero() {
@@ -63,13 +69,23 @@ export default function ContactHero() {
     try {
       const formData = new FormData(e.target);
 
-      await axios.post("/api/contact", {
-        fullName: formData.get("fullName"),
-        email: formData.get("email"),
-        subject: formData.get("subject"),
-        message: formData.get("message"),
-        captchaToken,
-      });
+      await axios.post(
+        `${CONTACT_API_BASE_URL}${CONTACT_API_ENDPOINT}`,
+        {
+          fullname: formData.get("fullName"),
+          email: formData.get("email"),
+          receiver: CONTACT_RECEIVER_EMAIL,
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+        },
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "X-Contact-Token": CONTACT_API_TOKEN,
+          },
+        }
+      );
 
       setStatus("success");
       showToast("success", "Message sent successfully!");
