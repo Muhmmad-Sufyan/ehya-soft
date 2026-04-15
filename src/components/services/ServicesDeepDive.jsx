@@ -89,10 +89,15 @@ export default function ServicesDeepDive() {
               <div
                 className={`order-1 ${isReversed ? "lg:order-2" : "lg:order-1"}`}
               >
-                <div
-                  // className="glass-card aspect-video rounded-2xl"
-                  className="aspect-video "
-                  style={{ backgroundImage: `url(${service.image})`,backgroundSize:'71% 129%' ,backgroundOrigin:'border-box',backgroundRepeat:'no-repeat',backgroundPosition:'center' }}
+                <img
+                  src={service.image}
+                  alt={`${service.title} illustration`}
+                  width={800}
+                  height={450}
+                  loading="lazy"
+                  fetchPriority="low"
+                  decoding="async"
+                  className="aspect-video w-[71%] mx-auto object-contain"
                 />
               </div>
 
