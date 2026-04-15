@@ -1,12 +1,42 @@
-export const metadata = {
-  title: "Privacy Policy - EhyaSoft",
+import { buildMetadata, pageUrl, breadcrumb, JsonLd, SITE_URL } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Privacy Policy | How EhyaSoft Protects Your Data",
   description:
-    "Read EhyaSoft's privacy policy to understand how we collect, use, and protect your personal information.",
+    "Read EhyaSoft's Privacy Policy to understand how we collect, use, store, and protect personal information for visitors, clients, and project partners.",
+  path: "/privacy-policy",
+});
+
+const privacyUrl = pageUrl("/privacy-policy");
+const privacyJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${privacyUrl}#webpage`,
+      url: privacyUrl,
+      name: "Privacy Policy | EhyaSoft",
+      description:
+        "EhyaSoft's Privacy Policy describing data collection, use, storage, and protection practices.",
+      inLanguage: "en",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#organization` },
+      breadcrumb: { "@id": `${privacyUrl}#breadcrumb` },
+    },
+    breadcrumb(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Privacy Policy", url: privacyUrl },
+      ],
+      privacyUrl
+    ),
+  ],
 };
 
 export default function PrivacyPolicyPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 lg:px-12 py-12 lg:py-24">
+      <JsonLd data={privacyJsonLd} />
       {/* Hero Title */}
       <div className="text-center mb-16">
         <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-6">
