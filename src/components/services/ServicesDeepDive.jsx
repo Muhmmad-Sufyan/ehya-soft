@@ -90,8 +90,9 @@ export default function ServicesDeepDive() {
                 className={`order-1 ${isReversed ? "lg:order-2" : "lg:order-1"}`}
               >
                 <div
-                  className="glass-card aspect-video rounded-2xl"
-                  style={{ backgroundImage: `url(${service.image})`,backgroundSize:'100% 100%' }}
+                  // className="glass-card aspect-video rounded-2xl"
+                  className="aspect-video "
+                  style={{ backgroundImage: `url(${service.image})`,backgroundSize:'71% 129%' ,backgroundOrigin:'border-box',backgroundRepeat:'no-repeat',backgroundPosition:'center' }}
                 />
               </div>
 
