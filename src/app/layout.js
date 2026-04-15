@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import {
   SITE_URL,
   SITE_NAME,
-  DEFAULT_OG_IMAGE,
   organizationSchema,
   websiteSchema,
   JsonLd,
@@ -28,6 +27,14 @@ export const metadata = {
   },
   description:
     "EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.",
+  alternates: {
+    canonical: SITE_URL + "/",
+    languages: {
+      "en": SITE_URL + "/",
+      "en-PK": SITE_URL + "/",
+      "x-default": SITE_URL + "/",
+    },
+  },
   applicationName: SITE_NAME,
   generator: "Next.js",
   keywords: [
@@ -65,14 +72,12 @@ export const metadata = {
     title: "EhyaSoft | Premium Software Development Agency",
     description:
       "EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.",
-    images: [{ url: DEFAULT_OG_IMAGE, width: 512, height: 512, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
     title: "EhyaSoft | Premium Software Development Agency",
     description:
       "EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.",
-    images: [DEFAULT_OG_IMAGE],
     creator: "@ehyaedu",
   },
   category: "technology",

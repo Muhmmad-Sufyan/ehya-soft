@@ -11,29 +11,33 @@ export function buildMetadata({
   title,
   description,
   path,
-  image = DEFAULT_OG_IMAGE,
+  image,
   type = "website",
 }) {
   const url = pageUrl(path);
+  const og = {
+    type,
+    url,
+    siteName: SITE_NAME,
+    title,
+    description,
+  };
+  const tw = {
+    card: "summary_large_image",
+    title,
+    description,
+  };
+  if (image) {
+    og.images = [{ url: image, width: 1200, height: 630, alt: SITE_NAME }];
+    tw.images = [image];
+  }
   return {
     title,
     description,
     alternates: { canonical: url },
     robots: { index: true, follow: true },
-    openGraph: {
-      type,
-      url,
-      siteName: SITE_NAME,
-      title,
-      description,
-      images: [{ url: image, width: 512, height: 512, alt: SITE_NAME }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [image],
-    },
+    openGraph: og,
+    twitter: tw,
   };
 }
 

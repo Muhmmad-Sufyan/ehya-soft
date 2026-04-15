@@ -19,14 +19,12 @@ export const metadata = {
     title: "Software Development Services | EhyaSoft",
     description:
       "Web, mobile, AI, UI/UX, and enterprise software services engineered for performance and scale.",
-    images: [{ url: `${SITE_URL}/favicon.svg`, width: 512, height: 512, alt: "EhyaSoft" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Software Development Services | EhyaSoft",
     description:
       "Web, mobile, AI, UI/UX, and enterprise software services engineered for performance and scale.",
-    images: [`${SITE_URL}/favicon.svg`],
   },
 };
 
