@@ -1,12 +1,104 @@
+const SITE_URL = "https://soft.ehya.com.pk";
+const PAGE_URL = `${SITE_URL}/terms-of-service/`;
+
 export const metadata = {
-  title: "Terms of Service - EhyaSoft",
+  title: "Terms of Service | EhyaSoft Software Development Agreement",
   description:
-    "Read EhyaSoft's terms of service to understand the rules and guidelines for using our website and services.",
+    "Read EhyaSoft's Terms of Service covering project agreements, payment terms, intellectual property, warranties, and liability for our software development services.",
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: PAGE_URL,
+    siteName: "EhyaSoft",
+    title: "Terms of Service | EhyaSoft",
+    description:
+      "EhyaSoft's Terms of Service — project agreements, payments, IP, warranties, and liability for our software development services.",
+    images: [
+      {
+        url: `${SITE_URL}/favicon.svg`,
+        width: 512,
+        height: 512,
+        alt: "EhyaSoft",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | EhyaSoft",
+    description:
+      "EhyaSoft's Terms of Service — project agreements, payments, IP, and liability.",
+    images: [`${SITE_URL}/favicon.svg`],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${PAGE_URL}#webpage`,
+      url: PAGE_URL,
+      name: "Terms of Service | EhyaSoft",
+      description:
+        "EhyaSoft's Terms of Service covering project agreements, payments, IP, and liability.",
+      inLanguage: "en",
+      dateModified: "2025-03-27",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#organization` },
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${PAGE_URL}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Terms of Service",
+          item: PAGE_URL,
+        },
+      ],
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "EhyaSoft",
+      url: SITE_URL,
+      logo: `${SITE_URL}/favicon.svg`,
+      email: "soft@ehya.com.pk",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "101 N, Block N Model Town",
+        addressLocality: "Lahore",
+        addressRegion: "Punjab",
+        addressCountry: "PK",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "EhyaSoft",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      inLanguage: "en",
+    },
+  ],
 };
 
 export default function TermsOfServicePage() {
   return (
     <main className="max-w-4xl mx-auto px-6 lg:px-12 py-12 lg:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Title */}
       <div className="text-center mb-16">
         <h1 className="text-5xl lg:text-7xl font-black text-slate-900 mb-6">
