@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -33,9 +34,13 @@ export default function HeroSection() {
               {/* Main Featured UI Card */}
               <div className="glass-card p-6 rounded-2xl shadow-2xl border border-white/40">
                 <div className="w-full h-64 bg-slate-100 rounded-xl mb-6 overflow-hidden">
-                  <img
+                  <Image
                     alt="Software Dashboard"
                     className="w-full h-full object-cover"
+                    width={800}
+                    height={512}
+                    priority
+                    fetchPriority="high"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5HCDG7VCf-POehyyDYgifx_2IYEVRf_Dly9xxfUNSF8EjuwhsiW2YdA7U7ppKk_znUUW5Iz--9KGAaxm7F1wh7KrmlTPbRYRE1zLnS3WZ8IPm1wRvKdwzitt7RvLEjzy49gvESYUs6loIOTFJ8OI7BhYdfMedlr7JfqjnT307aI74mYnsbumQqGqD_Om4pUwgfO3c5FTaU6PMWBcsA5CkpLWlAeFDz-oF9w4TtGb0d6ZPkQ7sHhCTy9Dowc9Pt_sxXHuoErhMbgM"
                   />
                 </div>

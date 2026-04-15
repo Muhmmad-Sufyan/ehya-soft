@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TrustLogos() {
   const logos = [
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAj-LWfeSokGLADtr6T3CKtgZ5CM7rcgBJKP6iEzlJSIOzw8gGiD4TLWj5Zl2_3P9SHICnbjdoT10G_cpg-o5xl_kLDP7A5lbvUWJ2F49llzW-XSeCjM9DeGDZdJEQrzpFiz01Q1XFoVzhN2HOQNK2Gll0PI6RCbTTh5k7WyocbqRLWIcqwK0h-TWptSH33snvhKx14rV_x6592Gz6aKAbRvcEAiGf74eZovO9iXguB9XknGuk9Tnm6anJtezNYH3RBUnPfER6kH3I",
@@ -15,7 +17,15 @@ export default function TrustLogos() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale">
           {logos.map((src, index) => (
-            <img key={index} alt="Client Logo" className="h-8" src={src} />
+            <Image
+              key={index}
+              alt="Client Logo"
+              className="h-8 w-auto"
+              src={src}
+              width={120}
+              height={32}
+              loading="lazy"
+            />
           ))}
         </div>
       </div>
