@@ -48,32 +48,53 @@ export function renderOg({ eyebrow, title, description }) {
           }}
         />
 
-        <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
           <div
             style={{
-              width: 56,
-              height: 56,
-              borderRadius: 14,
-              background:
-                "linear-gradient(135deg, #6366F1 0%, #38BDF8 100%)",
+              width: 96,
+              height: 96,
+              borderRadius: 22,
+              background: "#1A3A8F",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 30,
+              fontSize: 44,
               fontWeight: 800,
               letterSpacing: -1,
+              color: "#FFFFFF",
+              boxShadow: "0 20px 60px rgba(26,58,143,0.55)",
             }}
           >
-            E
+            ES
           </div>
           <div
             style={{
-              fontSize: 28,
-              fontWeight: 700,
-              letterSpacing: -0.5,
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            EhyaSoft
+            <div
+              style={{
+                fontSize: 38,
+                fontWeight: 800,
+                letterSpacing: -1,
+                lineHeight: 1,
+              }}
+            >
+              EhyaSoft
+            </div>
+            <div
+              style={{
+                fontSize: 18,
+                fontWeight: 500,
+                letterSpacing: 2,
+                textTransform: "uppercase",
+                color: "#94A3B8",
+                marginTop: 6,
+              }}
+            >
+              soft.ehya.com.pk
+            </div>
           </div>
         </div>
 
