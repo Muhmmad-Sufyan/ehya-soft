@@ -52,8 +52,15 @@ export default function Header() {
             </Link>
           </div>
           <div className="md:hidden">
-            <button className="p-2 text-slate-600" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              className="p-2 text-slate-700"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <svg aria-hidden="true" focusable="false" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M4 6h16M4 12h16m-7 6h7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
               </svg>
             </button>
@@ -61,7 +68,7 @@ export default function Header() {
         </div>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-100">
+        <div id="mobile-menu" className="md:hidden border-t border-slate-100">
           <div className="px-4 py-4 space-y-3">
             {[
               { href: '/', label: 'Home' },

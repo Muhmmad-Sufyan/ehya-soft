@@ -7,13 +7,13 @@
   --color-vibrant-start: #3B82F6;
   --color-vibrant-end: #6C5CE7;
   --color-background-light: #ffffff;
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Inter', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-display: var(--font-inter), 'Inter', system-ui, sans-serif;
   --radius-custom: 12px;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
 }
 
 .glass-card {
