@@ -20,13 +20,10 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.URL ? process.env.URL : SITE_URL)
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "EhyaSoft | Premium Software Development Agency",
-    template: "%s | EhyaSoft",
+    template: "%s",
   },
   description:
     "EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.",

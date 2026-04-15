@@ -1,0 +1,38 @@
+# EhyaSoft
+
+> EhyaSoft is a premium software development agency based in Lahore, Pakistan, building high-performance web applications, mobile apps, AI agents, UI/UX design, and enterprise software for startups and established businesses worldwide. We are the software development division of Ehya Education Services.
+
+## About
+
+- Company: EhyaSoft
+- Parent: Ehya Education Services (https://ehya.com.pk/)
+- Location: 101 N, Block N, Model Town, Lahore, Punjab, Pakistan
+- Email: soft@ehya.com.pk
+- Website: https://soft.ehya.com.pk
+
+## Services
+
+- [Web Development](https://soft.ehya.com.pk/services/#web-development): Next.js, React, Node.js, scalable web platforms
+- [Mobile App Development](https://soft.ehya.com.pk/services/#mobile-development): React Native, cross-platform iOS and Android apps
+- [AI Agents & Automation](https://soft.ehya.com.pk/services/#ai-agents): LLM-powered agents, workflow automation, custom AI integrations
+- [Enterprise Software](https://soft.ehya.com.pk/services/#enterprise-software): Custom business platforms, dashboards, internal tools
+- UI/UX Design: Product design, design systems, user research
+
+## Key Pages
+
+- [Home](https://soft.ehya.com.pk/): Overview of EhyaSoft services and capabilities
+- [About](https://soft.ehya.com.pk/about/): Team, story, values, and leadership
+- [Services](https://soft.ehya.com.pk/services/): Full breakdown of development services
+- [Portfolio](https://soft.ehya.com.pk/portfolio/): Case studies and selected client work
+- [Contact](https://soft.ehya.com.pk/contact/): Start a project, request a quote
+- [Privacy Policy](https://soft.ehya.com.pk/privacy-policy/)
+- [Terms of Service](https://soft.ehya.com.pk/terms-of-service/)
+
+## Selected Work
+
+- [AlifLaila Kids Digital Library](https://aliflaila.app/) — React Native, Next.js, Node.js, Laravel, MySQL
+- [Ehya Classmate](https://classmate.ehya.com.pk/) — React Native, Next.js, Node.js
+
+## Contact
+
+For new projects, partnerships, or inquiries: soft@ehya.com.pk
