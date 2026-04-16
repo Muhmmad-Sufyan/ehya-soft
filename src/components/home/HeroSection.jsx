@@ -16,8 +16,11 @@ export default function HeroSection() {
             <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8">
               Turning Ideas Into <span className="gradient-text">Powerful Digital</span> Products
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
+            <p className="text-xl text-slate-600 leading-relaxed mb-6 max-w-xl">
               EhyaSoft helps startups and businesses design, develop, and launch modern mobile apps, websites, and scalable software platforms.
+            </p>
+            <p className="text-base text-slate-500 leading-relaxed mb-10 max-w-xl">
+              Founded in 2019 in Lahore, Pakistan. A senior-heavy team of 10–25, four flagship products in continuous production, and client engagements across Pakistan and globally.
             </p>
             <div className="flex gap-3 sm:gap-4">
               <Link className="px-5 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white font-bold rounded-custom hover:shadow-xl transition-all gradient-bg whitespace-nowrap" href="/contact">
@@ -35,13 +38,14 @@ export default function HeroSection() {
               <div className="glass-card p-6 rounded-2xl shadow-2xl border border-white/40">
                 <div className="w-full h-64 bg-slate-100 rounded-xl mb-6 overflow-hidden">
                   <Image
-                    alt="Software Dashboard"
+                    alt="EhyaSoft product analytics dashboard preview"
                     className="w-full h-full object-cover"
                     width={800}
                     height={512}
                     priority
                     fetchPriority="high"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5HCDG7VCf-POehyyDYgifx_2IYEVRf_Dly9xxfUNSF8EjuwhsiW2YdA7U7ppKk_znUUW5Iz--9KGAaxm7F1wh7KrmlTPbRYRE1zLnS3WZ8IPm1wRvKdwzitt7RvLEjzy49gvESYUs6loIOTFJ8OI7BhYdfMedlr7JfqjnT307aI74mYnsbumQqGqD_Om4pUwgfO3c5FTaU6PMWBcsA5CkpLWlAeFDz-oF9w4TtGb0d6ZPkQ7sHhCTy9Dowc9Pt_sxXHuoErhMbgM"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 800px"
+                    src="/hero-dashboard.png"
                   />
                 </div>
                 <div className="space-y-3">

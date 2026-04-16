@@ -36,29 +36,36 @@ export default function ProjectGrid({ activeFilter, itemsPerPage = PORTFOLIO_ITE
   }
 
   return (
-    <div className="mb-20">
+    <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
         {paginated.map((project) => (
-          <Link
+          <article
             key={project.title}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow"
+            className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow flex flex-col"
           >
-            <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
-              <img
-                alt={project.title}
-                src={project.image}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                <span className="px-6 py-2.5 bg-white text-primary font-bold rounded-full text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  Visit Website
-                </span>
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="aspect-[16/10] relative overflow-hidden bg-slate-100">
+                <img
+                  alt={`${project.title} — screenshot of the live product`}
+                  src={project.image}
+                  width={1280}
+                  height={800}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                  <span className="px-6 py-2.5 bg-white text-primary font-bold rounded-full text-sm shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                    Visit Website
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="p-4 sm:p-6">
+            </Link>
+            <div className="p-4 sm:p-6 flex-1 flex flex-col">
               <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3">
                 {project.tags.map((tag) => (
                   <span
@@ -70,13 +77,48 @@ export default function ProjectGrid({ activeFilter, itemsPerPage = PORTFOLIO_ITE
                 ))}
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
-                {project.title}
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {project.title}
+                </Link>
               </h3>
-              <p className="text-slate-600 text-sm leading-relaxed text-justify">
+              <p className="text-slate-600 text-sm leading-relaxed text-justify mb-4">
                 {project.description}
               </p>
+              <dl className="mt-auto grid grid-cols-2 gap-3 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                {project.industry && (
+                  <div>
+                    <dt className="font-semibold text-slate-500 uppercase tracking-wide text-[10px] mb-0.5">
+                      Industry
+                    </dt>
+                    <dd className="text-slate-800">{project.industry}</dd>
+                  </div>
+                )}
+                {project.timeline && (
+                  <div>
+                    <dt className="font-semibold text-slate-500 uppercase tracking-wide text-[10px] mb-0.5">
+                      Timeline
+                    </dt>
+                    <dd className="text-slate-800">{project.timeline}</dd>
+                  </div>
+                )}
+                {project.outcome && (
+                  <div className="col-span-2">
+                    <dt className="font-semibold text-slate-500 uppercase tracking-wide text-[10px] mb-0.5">
+                      Outcome
+                    </dt>
+                    <dd className="text-slate-700 leading-relaxed">
+                      {project.outcome}
+                    </dd>
+                  </div>
+                )}
+              </dl>
             </div>
-          </Link>
+          </article>
         ))}
       </div>
 

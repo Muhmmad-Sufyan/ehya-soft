@@ -12,11 +12,25 @@ export default function OurStory() {
               Building the Future, <span className="gradient-text">One Line at a Time</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              EhyaSoft is a premium software development division of Ehya Education Services, founded with the mission of bridging the gap between innovative ideas and world-class digital products. We started as a small team of passionate developers and have grown into a full-service studio trusted by clients worldwide.
+              EhyaSoft was founded in 2019 as the premium software development division of Ehya Education Services. We started as a small team of passionate developers and now run a senior-heavy studio of roughly 10–25 engineers, designers, and product leads, shipping production software to clients in Pakistan and abroad.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              As part of Ehya Education Services, we carry forward a deep commitment to knowledge sharing and empowerment. Every project we take on is an opportunity to educate, elevate, and engineer solutions that stand the test of time.
+              Four flagship products are live in production today: AlifLaila (early-childhood literacy), Ehya Classmate (AI-assisted secondary-school learning), FIELDx AI (poultry diagnostics), and Ittesaal (peer-reviewed academic publishing). Every client engagement is run by people who also ship and operate these products — no hand-offs, no juniors learning on your codebase.
             </p>
+            <dl className="grid grid-cols-3 gap-4 mb-8 border-t border-b border-slate-200 py-6">
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Founded</dt>
+                <dd className="text-2xl md:text-3xl font-black text-slate-900">2019</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Flagship products</dt>
+                <dd className="text-2xl md:text-3xl font-black text-slate-900">4</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">Team size</dt>
+                <dd className="text-2xl md:text-3xl font-black text-slate-900">10–25</dd>
+              </div>
+            </dl>
             {/* Quote Card */}
             <div className="glass-card p-6 rounded-2xl flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0">

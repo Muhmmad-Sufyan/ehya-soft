@@ -1,26 +1,36 @@
+import Link from "next/link";
+
 export default function PortfolioCTA() {
   return (
-    <section className="bg-slate-900 rounded-3xl p-8 md:p-12 lg:p-20 text-center mb-12">
-      <h3 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
-        Ready to build the future together?
-      </h3>
-      <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-        Let&apos;s turn your vision into a world-class digital product. Our team
-        is ready to deliver excellence.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="/contact"
-          className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all"
-        >
-          Start a Project
-        </a>
-        <a
-          href="/contact"
-          className="px-8 py-4 border border-slate-600 text-white font-bold rounded-full hover:bg-white/10 transition-all"
-        >
-          Book a Call
-        </a>
+    <section className="py-12 md:py-24">
+      <div className="max-w-7xl mx-auto">
+        <div className="gradient-bg rounded-3xl p-8 md:p-12 lg:p-20 text-center relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+          <div className="relative">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+              Ready to build the future together?
+            </h2>
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
+              Let&rsquo;s turn your vision into a world-class digital product. Our team is ready to deliver excellence.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                className="px-8 py-4 bg-white text-primary font-bold rounded-custom hover:shadow-xl hover:bg-slate-50 transition-all"
+                href="/contact"
+              >
+                Start a Project
+              </Link>
+              <Link
+                className="px-8 py-4 border-2 border-white text-white font-bold rounded-custom hover:bg-white/10 transition-all"
+                href="/contact"
+              >
+                Book a Call
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

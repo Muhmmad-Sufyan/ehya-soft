@@ -42,7 +42,7 @@ function StarRating() {
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 py-12 md:py-20 px-6 mb-12 md:mb-20">
+    <section className="bg-slate-50 py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8 md:mb-12">
           <div>

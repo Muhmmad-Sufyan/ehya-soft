@@ -2,79 +2,92 @@ import ServicesHero from "@/components/services/ServicesHero";
 import ServicesDeepDive from "@/components/services/ServicesDeepDive";
 import AgileMethodology from "@/components/services/AgileMethodology";
 import ServicesCTA from "@/components/services/ServicesCTA";
+import FaqSection from "@/components/FaqSection";
+import {
+  buildMetadata,
+  pageUrl,
+  breadcrumb,
+  faqPageSchema,
+  JsonLd,
+  SITE_URL,
+} from "@/lib/seo";
+import { SERVICES_FAQS } from "@/lib/faqs";
 
-const SITE_URL = "https://soft.ehya.com.pk";
-const PAGE_URL = `${SITE_URL}/services/`;
-
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Software Development Services | Web, Mobile & AI — EhyaSoft",
   description:
     "EhyaSoft delivers web, mobile, AI agent, UI/UX, and enterprise software development services built for scale, performance, and measurable business outcomes.",
-  alternates: { canonical: PAGE_URL },
-  robots: { index: true, follow: true },
-  openGraph: {
-    type: "website",
-    url: PAGE_URL,
-    siteName: "EhyaSoft",
-    title: "Software Development Services | EhyaSoft",
-    description:
-      "Web, mobile, AI, UI/UX, and enterprise software services engineered for performance and scale.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Software Development Services | EhyaSoft",
-    description:
-      "Web, mobile, AI, UI/UX, and enterprise software services engineered for performance and scale.",
-  },
-};
+  path: "/services",
+});
 
-const jsonLd = {
+const servicesUrl = pageUrl("/services");
+
+const SERVICE_ENTRIES = [
+  { id: "web-development", name: "Web Development" },
+  { id: "mobile-development", name: "Mobile Experiences" },
+  { id: "enterprise-software", name: "Custom Enterprise Software" },
+  { id: "ui-ux-design", name: "UI/UX Design Systems" },
+  { id: "ai-agents", name: "AI Agents & Intelligent Automation" },
+];
+
+const servicesJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": `${PAGE_URL}#webpage`,
-      url: PAGE_URL,
+      "@id": `${servicesUrl}#webpage`,
+      url: servicesUrl,
       name: "Software Development Services | EhyaSoft",
       description:
         "EhyaSoft's full service catalog: web, mobile, AI agents, UI/UX, and enterprise software.",
       inLanguage: "en",
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": `${SITE_URL}/#organization` },
-      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      breadcrumb: { "@id": `${servicesUrl}#breadcrumb` },
     },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${PAGE_URL}#breadcrumb`,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-        { "@type": "ListItem", position: 2, name: "Services", item: PAGE_URL },
+    breadcrumb(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Services", url: servicesUrl },
       ],
-    },
+      servicesUrl
+    ),
     {
       "@type": "ItemList",
-      "@id": `${PAGE_URL}#services`,
-      itemListElement: [
-        { "@type": "Service", position: 1, name: "Web Development", url: `${PAGE_URL}#web-development`, provider: { "@id": `${SITE_URL}/#organization` } },
-        { "@type": "Service", position: 2, name: "Mobile Experiences", url: `${PAGE_URL}#mobile-development`, provider: { "@id": `${SITE_URL}/#organization` } },
-        { "@type": "Service", position: 3, name: "Custom Enterprise Software", url: `${PAGE_URL}#enterprise-software`, provider: { "@id": `${SITE_URL}/#organization` } },
-        { "@type": "Service", position: 4, name: "UI/UX Design Systems", url: `${PAGE_URL}#ui-ux-design`, provider: { "@id": `${SITE_URL}/#organization` } },
-        { "@type": "Service", position: 5, name: "AI Agents & Intelligent Automation", url: `${PAGE_URL}#ai-agents`, provider: { "@id": `${SITE_URL}/#organization` } },
-      ],
+      "@id": `${servicesUrl}#services`,
+      name: "EhyaSoft Services",
+      itemListElement: SERVICE_ENTRIES.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Service",
+          "@id": `${servicesUrl}#${s.id}-service`,
+          name: s.name,
+          url: `${servicesUrl}#${s.id}`,
+          provider: { "@id": `${SITE_URL}/#organization` },
+          areaServed: [
+            { "@type": "Country", name: "Pakistan" },
+            { "@type": "Place", name: "Worldwide" },
+          ],
+        },
+      })),
     },
+    faqPageSchema(SERVICES_FAQS, servicesUrl),
   ],
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={servicesJsonLd} />
       <ServicesHero />
       <ServicesDeepDive />
       <AgileMethodology />
+      <FaqSection
+        heading="What should you know before choosing EhyaSoft?"
+        intro="The most common questions clients ask about our services, process, and pricing."
+        faqs={SERVICES_FAQS}
+      />
       <ServicesCTA />
     </>
   );

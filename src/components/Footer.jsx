@@ -1,4 +1,11 @@
 import Link from "next/link";
+import {
+  WHATSAPP_LINK,
+  WHATSAPP_DISPLAY,
+  BUSINESS_EMAIL,
+  BUSINESS_ADDRESS_LINE,
+  BUSINESS_CITY,
+} from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -13,8 +20,22 @@ export default function Footer() {
               <span className="font-bold text-xl tracking-tight">EhyaSoft</span>
             </div>
             <p className="text-slate-600 max-w-sm mb-6">
-              Building world-class software for the modern world. We transform complex problems into elegant digital solutions.
+              Premium software development agency based in Lahore, Pakistan. Founded 2019, shipping web, mobile, and AI products for clients worldwide.
             </p>
+            <address className="not-italic text-sm text-slate-600 space-y-2 mb-6">
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-base mt-0.5">location_on</span>
+                <span>{BUSINESS_ADDRESS_LINE}, {BUSINESS_CITY}, Pakistan</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-base mt-0.5">mail</span>
+                <a href={`mailto:${BUSINESS_EMAIL}`} className="hover:text-primary transition-colors">{BUSINESS_EMAIL}</a>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-base mt-0.5">chat</span>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp: {WHATSAPP_DISPLAY}</a>
+              </div>
+            </address>
             <div className="flex flex-wrap gap-3">
               <a aria-label="EhyaSoft on LinkedIn" className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:text-blue-700 hover:border-blue-700 transition-all" href="https://www.linkedin.com/company/ehya-education-services/" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" focusable="false" className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>

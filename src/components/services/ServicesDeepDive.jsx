@@ -5,6 +5,7 @@ const services = [
     id: "web-development",
     icon: "globe",
     title: "Web Development",
+    heading: "What does web development look like at EhyaSoft?",
     description:
       "We build blazing-fast, SEO-optimized web applications using the latest frameworks and cloud infrastructure. Our sites are engineered for performance, accessibility, and conversion.",
     bullets: [
@@ -19,6 +20,7 @@ const services = [
     id: "mobile-development",
     icon: "smartphone",
     title: "Mobile Experiences",
+    heading: "How do you build apps that users actually love?",
     description:
       "From native iOS and Android to cross-platform solutions, we craft mobile apps that users love. Every interaction is designed for delight and built for reliability.",
     bullets: [
@@ -33,6 +35,7 @@ const services = [
     id: "enterprise-software",
     icon: "terminal",
     title: "Custom Enterprise Software",
+    heading: "When does custom enterprise software beat off-the-shelf?",
     description:
       "We architect and build mission-critical enterprise systems that streamline operations and unlock new revenue streams. Our solutions are secure, scalable, and maintainable.",
     bullets: [
@@ -47,6 +50,7 @@ const services = [
     id: "ui-ux-design",
     icon: "palette",
     title: "UI/UX Design Systems",
+    heading: "Why start with UI/UX before engineering?",
     description:
       "Great products start with great design. We create cohesive design systems and pixel-perfect interfaces grounded in user research and modern design principles.",
     bullets: [
@@ -61,6 +65,7 @@ const services = [
     id: "ai-agents",
     icon: "smart_toy",
     title: "AI Agents & Intelligent Automation",
+    heading: "What do production-grade AI agents actually do?",
     description:
       "We build production-ready AI systems that go beyond basic chat experiences. From Agentic AI and autonomous agents to RAG pipelines and Graph RAG architectures, our solutions help businesses automate complex workflows, unlock connected knowledge, and deliver faster, smarter decisions at scale.",
     bullets: [
@@ -111,10 +116,13 @@ export default function ServicesDeepDive() {
                   <span className="material-symbols-outlined text-3xl text-primary">
                     {service.icon}
                   </span>
-                  <h3 className="text-3xl font-bold text-slate-900">
+                  <p className="text-sm font-bold uppercase tracking-widest text-primary">
                     {service.title}
-                  </h3>
+                  </p>
                 </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-snug">
+                  {service.heading || service.title}
+                </h2>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   {service.description}
                 </p>

@@ -2,21 +2,19 @@ import { SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
+const LAST_EDITED = {
+  "/": "2026-04-16",
+  "/about/": "2026-04-16",
+  "/services/": "2026-04-16",
+  "/portfolio/": "2026-04-16",
+  "/contact/": "2026-04-16",
+  "/privacy-policy/": "2025-03-27",
+  "/terms-of-service/": "2025-03-27",
+};
+
 export default function sitemap() {
-  const now = new Date();
-  const routes = [
-    { path: "/", priority: 1.0, changeFrequency: "weekly" },
-    { path: "/about/", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/", priority: 0.9, changeFrequency: "monthly" },
-    { path: "/portfolio/", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/contact/", priority: 0.7, changeFrequency: "yearly" },
-    { path: "/privacy-policy/", priority: 0.3, changeFrequency: "yearly" },
-    { path: "/terms-of-service/", priority: 0.3, changeFrequency: "yearly" },
-  ];
-  return routes.map((r) => ({
-    url: `${SITE_URL}${r.path}`,
-    lastModified: now,
-    changeFrequency: r.changeFrequency,
-    priority: r.priority,
+  return Object.entries(LAST_EDITED).map(([path, date]) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: new Date(date),
   }));
 }

@@ -1,15 +1,23 @@
 import AboutHero from "@/components/about/AboutHero";
 import OurStory from "@/components/about/OurStory";
-import StatsSection from "@/components/about/StatsSection";
 import CoreValues from "@/components/about/CoreValues";
 import LeadershipTeam from "@/components/about/LeadershipTeam";
 import AboutCTA from "@/components/about/AboutCTA";
-import { buildMetadata, pageUrl, breadcrumb, JsonLd, SITE_URL } from "@/lib/seo";
+import FaqSection from "@/components/FaqSection";
+import {
+  buildMetadata,
+  pageUrl,
+  breadcrumb,
+  faqPageSchema,
+  JsonLd,
+  SITE_URL,
+} from "@/lib/seo";
+import { ABOUT_FAQS } from "@/lib/faqs";
 
 export const metadata = buildMetadata({
   title: "About EhyaSoft | Premium Software Development Team in Lahore",
   description:
-    "Learn about EhyaSoft — a premium software development division of Ehya Education Services. Meet our team, explore our values, and discover the story behind our work.",
+    "Learn about EhyaSoft — a premium software development division of Ehya Education Services founded in 2019. Meet our leadership, explore our values, and see the flagship products we operate.",
   path: "/about",
 });
 
@@ -23,7 +31,7 @@ const aboutJsonLd = {
       url: aboutUrl,
       name: "About EhyaSoft",
       description:
-        "EhyaSoft is a premium software development agency and division of Ehya Education Services.",
+        "EhyaSoft is a premium software development agency and division of Ehya Education Services, founded in 2019 in Lahore, Pakistan.",
       inLanguage: "en",
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": `${SITE_URL}/#organization` },
@@ -36,6 +44,7 @@ const aboutJsonLd = {
       ],
       aboutUrl
     ),
+    faqPageSchema(ABOUT_FAQS, aboutUrl),
   ],
 };
 
@@ -45,9 +54,13 @@ export default function AboutPage() {
       <JsonLd data={aboutJsonLd} />
       <AboutHero />
       <OurStory />
-      {/* <StatsSection /> */}
       <CoreValues />
-      {/* <LeadershipTeam /> */}
+      <LeadershipTeam />
+      <FaqSection
+        heading="What else should you know about EhyaSoft?"
+        intro="Everything new clients and partners tend to ask before a first call."
+        faqs={ABOUT_FAQS}
+      />
       <AboutCTA />
     </>
   );

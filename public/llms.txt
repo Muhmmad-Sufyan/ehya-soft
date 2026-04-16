@@ -6,32 +6,39 @@
 
 - Company: EhyaSoft
 - Parent: Ehya Education Services (https://ehya.com.pk/)
+- Founded: 2019
 - Location: 101 N, Block N, Model Town, Lahore, Punjab, Pakistan
 - Email: soft@ehya.com.pk
 - Website: https://soft.ehya.com.pk
+- License: https://creativecommons.org/licenses/by/4.0/
+- Specialization: Pakistan, Lahore, edtech, AI agents, RAG, GraphRAG, web apps, mobile apps, enterprise software
+- Team size: 10–25
+- Hours: Mon–Fri 09:00–19:00 PKT (Sat & Sun closed)
 
 ## Services
 
 - [Web Development](https://soft.ehya.com.pk/services/#web-development): Next.js, React, Node.js, scalable web platforms
-- [Mobile App Development](https://soft.ehya.com.pk/services/#mobile-development): React Native, cross-platform iOS and Android apps
-- [AI Agents & Automation](https://soft.ehya.com.pk/services/#ai-agents): LLM-powered agents, workflow automation, custom AI integrations
-- [Enterprise Software](https://soft.ehya.com.pk/services/#enterprise-software): Custom business platforms, dashboards, internal tools
-- UI/UX Design: Product design, design systems, user research
+- [Mobile App Development](https://soft.ehya.com.pk/services/#mobile-development): React Native, Flutter, native Swift/Kotlin
+- [AI Agents & Automation](https://soft.ehya.com.pk/services/#ai-agents): LLM-powered agents, RAG & GraphRAG pipelines, workflow automation
+- [Enterprise Software](https://soft.ehya.com.pk/services/#enterprise-software): Custom CRM/ERP, dashboards, internal tools, microservices
+- [UI/UX Design](https://soft.ehya.com.pk/services/#ui-ux-design): Product design, design systems, user research
 
 ## Key Pages
 
 - [Home](https://soft.ehya.com.pk/): Overview of EhyaSoft services and capabilities
-- [About](https://soft.ehya.com.pk/about/): Team, story, values, and leadership
+- [About](https://soft.ehya.com.pk/about/): Team, story, values, leadership
 - [Services](https://soft.ehya.com.pk/services/): Full breakdown of development services
 - [Portfolio](https://soft.ehya.com.pk/portfolio/): Case studies and selected client work
-- [Contact](https://soft.ehya.com.pk/contact/): Start a project, request a quote
+- [Contact](https://soft.ehya.com.pk/contact/): Start a project, request a quote, directions to the Lahore office
 - [Privacy Policy](https://soft.ehya.com.pk/privacy-policy/)
 - [Terms of Service](https://soft.ehya.com.pk/terms-of-service/)
 
 ## Selected Work
 
-- [AlifLaila Kids Digital Library](https://aliflaila.app/) — React Native, Next.js, Node.js, Laravel, MySQL
-- [Ehya Classmate](https://classmate.ehya.com.pk/) — React Native, Next.js, Node.js
+- [AlifLaila Kids Digital Library](https://aliflaila.app/) — EdTech, flagship since 2023. React Native, Next.js, Node.js, Laravel, MySQL. Synced kids / parents / schools experiences.
+- [Ehya Classmate](https://classmate.ehya.com.pk/) — EdTech, 2024. React Native, Next.js, Node.js, RAG. AI study companion for secondary-school students with SLO-based practice.
+- [FIELDx AI — Smart Poultry Diagnosis & Farm Health Assistant](https://fieldxai.com/) — AgriTech veterinary diagnostics, 2024. React Native, Next.js, Node.js, MySQL, GraphRAG. AI-driven decision support for poultry vets, consultants, and farm managers: symptom analysis, treatment planning, and complete digital visit records in one mobile app.
+- [Ittesaal — Journal of Connecting Discourses](https://journal.ehya.com.pk/ijcd) — Academic publishing, 2023. OJS, PHP, MySQL. Peer-reviewed open-access journal platform.
 
 ## Contact
 

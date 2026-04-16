@@ -1,8 +1,14 @@
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import PortfolioFilter from "@/components/portfolio/PortfolioFilter";
-import Testimonials from "@/components/portfolio/Testimonials";
 import PortfolioCTA from "@/components/portfolio/PortfolioCTA";
-import { buildMetadata, pageUrl, breadcrumb, JsonLd, SITE_URL } from "@/lib/seo";
+import {
+  buildMetadata,
+  pageUrl,
+  breadcrumb,
+  JsonLd,
+  SITE_URL,
+} from "@/lib/seo";
+import { PORTFOLIO_PROJECTS } from "@/lib/constants";
 
 export const metadata = buildMetadata({
   title: "Portfolio & Case Studies | EhyaSoft Software Development Work",
@@ -12,6 +18,32 @@ export const metadata = buildMetadata({
 });
 
 const portfolioUrl = pageUrl("/portfolio");
+
+const projectSchemas = PORTFOLIO_PROJECTS.map((p, i) => ({
+  "@type": "SoftwareApplication",
+  "@id": `${portfolioUrl}#project-${i + 1}`,
+  name: p.title,
+  url: p.link,
+  applicationCategory: p.applicationCategory || "BusinessApplication",
+  operatingSystem: "Web, iOS, Android",
+  description: p.description,
+  creator: { "@id": `${SITE_URL}/#organization` },
+  image: `${SITE_URL}${p.image}`,
+  ...(p.stack && { keywords: p.stack.join(", ") }),
+  ...(p.timeline && { dateCreated: p.timeline }),
+}));
+
+const projectItemList = {
+  "@type": "ItemList",
+  "@id": `${portfolioUrl}#projects`,
+  name: "EhyaSoft Case Studies",
+  itemListElement: PORTFOLIO_PROJECTS.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: { "@id": `${portfolioUrl}#project-${i + 1}` },
+  })),
+};
+
 const portfolioJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -26,14 +58,17 @@ const portfolioJsonLd = {
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": `${SITE_URL}/#organization` },
       breadcrumb: { "@id": `${portfolioUrl}#breadcrumb` },
+      mainEntity: { "@id": `${portfolioUrl}#projects` },
     },
     breadcrumb(
       [
         { name: "Home", url: `${SITE_URL}/` },
         { name: "Portfolio", url: portfolioUrl },
       ],
-      portfolioUrl
+      portfolioUrl,
     ),
+    projectItemList,
+    ...projectSchemas,
   ],
 };
 
@@ -41,11 +76,10 @@ export default function PortfolioPage() {
   return (
     <>
       <JsonLd data={portfolioJsonLd} />
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 pt-12">
         <PortfolioHero />
         <PortfolioFilter />
       </div>
-      {/* <Testimonials /> */}
       <div className="max-w-7xl mx-auto px-6">
         <PortfolioCTA />
       </div>

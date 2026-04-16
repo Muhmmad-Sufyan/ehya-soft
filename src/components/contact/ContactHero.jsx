@@ -10,6 +10,11 @@ import {
   CONTACT_RECEIVER_EMAIL,
 } from "@/lib/constants";
 import showToast from "@/components/ToastMessage";
+import {
+  WHATSAPP_LINK,
+  WHATSAPP_DISPLAY,
+  BUSINESS_EMAIL,
+} from "@/lib/constants";
 
 export default function ContactHero() {
   const captchaContainerRef = useRef(null);
@@ -257,21 +262,36 @@ export default function ContactHero() {
               Direct Contact
             </h3>
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 hover:bg-primary/20 transition-colors">
+              <a
+                href={`mailto:${BUSINESS_EMAIL}`}
+                className="flex items-start gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                   <span className="material-symbols-outlined text-primary">
                     mail
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-slate-900">
-                    Email
-                  </p>
-                  <p className="text-slate-500">
-                    soft@ehya.com.pk
-                  </p>
+                  <p className="font-bold text-slate-900">Email</p>
+                  <p className="text-slate-500">{BUSINESS_EMAIL}</p>
                 </div>
-              </div>
+              </a>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <span className="material-symbols-outlined text-primary">
+                    chat
+                  </span>
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">WhatsApp</p>
+                  <p className="text-slate-500">{WHATSAPP_DISPLAY}</p>
+                </div>
+              </a>
             </div>
           </div>
 

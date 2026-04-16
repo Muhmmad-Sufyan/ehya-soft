@@ -31,8 +31,8 @@ export default function WhyChooseUs() {
 
   const stats = [
     { value: "98%", label: "Client Satisfaction", offsetTop: false },
-    { value: "150+", label: "Projects Launched", offsetTop: true },
-    { value: "12+", label: "Countries Reached", offsetTop: false },
+    { value: "25+", label: "Team Members", offsetTop: true },
+    { value: "15+", label: "Technologies", offsetTop: false },
     { value: "24/7", label: "Global Support", offsetTop: true },
   ];
 
