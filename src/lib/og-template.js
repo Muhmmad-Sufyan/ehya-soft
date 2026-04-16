@@ -137,7 +137,7 @@ export function renderOg({ eyebrow, title, description }) {
           ) : null}
         </div>
 
-        {/* <div
+        <div
           style={{
             display: "flex",
             alignItems: "center",
@@ -173,7 +173,7 @@ export function renderOg({ eyebrow, title, description }) {
             </div>
             soft@ehya.com.pk
           </div>
-        </div> */}
+        </div>
       </div>
     ),
     OG_SIZE
