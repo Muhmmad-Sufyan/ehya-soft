@@ -1,5 +1,4 @@
-// export const SITE_URL = "https://soft.ehya.com.pk";
-export const SITE_URL = "https://ehyasoft.netlify.app";
+export const SITE_URL = "https://soft.ehya.com.pk";
 export const SITE_NAME = "EhyaSoft";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.svg`;
 
