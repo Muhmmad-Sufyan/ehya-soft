@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     id: "web-development",
@@ -87,17 +89,17 @@ export default function ServicesDeepDive() {
             >
               {/* Image */}
               <div
-                className={`order-1 ${isReversed ? "lg:order-2" : "lg:order-1"}`}
+                className={`order-1   ${isReversed ? "lg:order-2" : "lg:order-1"}`}
               >
-                <img
+                <Image
                   src={service.image}
                   alt={`${service.title} illustration`}
-                  width={800}
-                  height={450}
+                  width={2750}
+                  height={1950}
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"
-                  className="aspect-video w-full mx-auto object-contain"
+                  className="md:aspect-[16/9] w-full mx-auto object-contain"
                 />
               </div>
 
