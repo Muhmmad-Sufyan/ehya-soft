@@ -20,8 +20,7 @@ export function renderOg({ eyebrow, title, description }) {
           color: "#F8FAFC",
           position: "relative",
         }}
-      >
-        <div
+      > <div
           style={{
             position: "absolute",
             top: -220,
