@@ -148,7 +148,32 @@ export function renderOg({ eyebrow, title, description }) {
           }}
         >
           <div style={{ display: "flex" }}>soft.ehya.com.pk</div>
-          <div style={{ display: "flex" }}>Premium Software Development</div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              color: "#E2E8F0",
+              fontWeight: 600,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 28,
+                height: 28,
+                borderRadius: 8,
+                background: "rgba(99,102,241,0.25)",
+                color: "#C7D2FE",
+                fontSize: 16,
+              }}
+            >
+              @
+            </div>
+            soft@ehya.com.pk
+          </div>
         </div>
       </div>
     ),
