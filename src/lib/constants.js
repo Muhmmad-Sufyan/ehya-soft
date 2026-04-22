@@ -1,9 +1,8 @@
 // ─── Business Contact ────────────────────────────────────────────────────────
 // WhatsApp click-to-chat. Format: country code + number, no symbols.
-// TODO: replace with the real EhyaSoft WhatsApp number when available.
-export const WHATSAPP_NUMBER = "923446461585";
+export const WHATSAPP_NUMBER = "923424174775";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
-export const WHATSAPP_DISPLAY = "+92 344 6461585";
+export const WHATSAPP_DISPLAY = "+92 342 4174775";
 
 export const BUSINESS_EMAIL = "soft@ehya.com.pk";
 export const BUSINESS_ADDRESS_LINE = "101 N, Block N Model Town";
